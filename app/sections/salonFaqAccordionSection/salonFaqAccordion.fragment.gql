@@ -1,0 +1,11 @@
+fragment FaqAccordionElements on FaqAccordions {
+  title
+  accordions {
+    ... on ModuleAccordion {
+      title
+      description {
+        text
+      }
+    }
+  }
+}

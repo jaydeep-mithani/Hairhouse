@@ -1,0 +1,16 @@
+fragment SectionCategoryCarousel on SectionCategoryCarousel {
+  backgroundColour {
+    hex
+  }
+  title
+  tilesAlignment
+  categories {
+    heading
+    url
+    image {
+      altText
+      id
+      url
+    }
+  }
+}

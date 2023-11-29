@@ -1,0 +1,1 @@
+export { BrandTextSection } from './BrandTextSection'

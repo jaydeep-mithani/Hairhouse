@@ -1,0 +1,78 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0;
+
+  .leftSide {
+    width: 50%;
+    position: sticky;
+    padding: 86px 108px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    --tw-translate-y: calc(var(--height-nav) * -1);
+
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skew(var(--tw-skew-x))
+      skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+
+    .leftSideHeadings,
+    .preheadingAndHeading {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .leftSideHeadings {
+      gap: 16px;
+    }
+
+    .preheadingAndHeading {
+      gap: 4px;
+    }
+
+    .callToActionContainer {
+      display: flex;
+      gap: 12px;
+
+      & > * {
+        font-weight: 400;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      div {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      .firstNameLastNameContainer {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+
+        & > div {
+          width: calc(50% - 6px);
+        }
+      }
+    }
+  }
+
+  @media (--tablet), (--mobile) {
+    flex-direction: column;
+
+    .leftSide {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  @media (--mobile) {
+    .leftSide {
+      padding: 32px 16px;
+    }
+  }
+}

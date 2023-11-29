@@ -1,0 +1,38 @@
+query productPages($handle: String) {
+  productPages(where: { handle: $handle }, first: 1) {
+    hideBreadcrumb
+    id
+    shopifyId
+    product {
+      id
+      description
+      handle
+    }
+    sections {
+      ... on Node {
+        id
+        __typename
+      }
+      ... on SectionProductMain {
+        ...SectionProductMain
+      }
+      ... on ProductHowTo {
+        ...ProductHowTo
+      }
+      ... on FeatureProductCarouselTabbed {
+        ...FeatureProductCarouselTabbed
+      }
+      ... on EditorialTile {
+        ...EditorialTile
+      }
+    }
+  }
+  websiteConfigs(first: 1) {
+    footer {
+      ...Footer
+    }
+    header {
+      ...Header
+    }
+  }
+}

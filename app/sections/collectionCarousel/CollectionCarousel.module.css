@@ -1,0 +1,112 @@
+.root {
+  position: relative;
+  padding: 60px 0;
+
+  --titleWrapperPadding: 0 16px 20px;
+
+  @media (--desktop) {
+    --swiperWrapperPaddingBottom: 86px;
+
+    padding: 100px 0;
+  }
+
+  :global(.swiper-slide) {
+    &:nth-child(even) {
+      transform: translate(0, 40px);
+    }
+
+    @media (--tablet), (--mobile) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &.type_straight {
+    --titleWrapperPadding: 0 0 20px;
+    --swiperWrapperPaddingBottom: 20px;
+
+    @media (--tablet-m) {
+      --titleWrapperPadding: 0 38px 20px 24px;
+      --swiperWrapperPaddingBottom: 36px;
+      --custom-swiper-scrollbar-sides-offset: 40px;
+    }
+
+    @media (--desktop) {
+      --titleWrapperPadding: 0 48px 32px 34px;
+    }
+
+    :global(.swiper-slide) {
+      &:nth-child(even) {
+        transform: translate(0, 0);
+      }
+    }
+
+    .title {
+      --typography-large-font-size: var(--typography-display-xs-small-desktop-font-size);
+
+      font-family: var(--typography-heading-font-family-stack, 'Fakt');
+      font-weight: 500;
+      line-height: 120%;
+      margin-top: 8px;
+    }
+  }
+}
+
+.categoryImage {
+  position: relative;
+}
+
+.square {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.carouselWrapper {
+  --titleWrapperPadding: 0 0 17px;
+
+  @media (--desktop) {
+    --titleWrapperPadding: 0 50px 25px;
+  }
+}
+
+.orientationHorizontal {
+  --titleWrapperPadding: 0 0 21px;
+
+  @media (--desktop) {
+    --titleWrapperPadding: 0 49px 18px 35px;
+  }
+}
+
+.categoryTitleVertical {
+  position: absolute;
+  left: -15px;
+  transform: translate(0, -37%) rotate(-90deg);
+  transform-origin: top left;
+
+  @media (--desktop), (--tablet) {
+    left: -24px;
+  }
+}
+
+.categoryTitleHorizontal {
+  --typography-subheading-font-weight-regular: 500;
+  --typography-subheading-font-size: 16px;
+  --typography-subheading-line-height: 19.2px;
+
+  padding: 8px 0 0;
+
+  @media (--desktop) {
+    --typography-subheading-font-weight-regular: 400;
+  }
+}
+
+.customScrollbar {
+  @media (--desktop) {
+    --swiperWrapperPaddingBottom: 47px;
+  }
+}
+
+.customScrollbarHorizntal {
+  @media (--desktop) {
+    --swiperWrapperPaddingBottom: 38px;
+  }
+}

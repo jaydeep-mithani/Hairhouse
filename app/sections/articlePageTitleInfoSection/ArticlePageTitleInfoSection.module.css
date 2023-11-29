@@ -1,0 +1,193 @@
+.root {
+  position: relative;
+  width: 100%;
+  padding: 0 105px;
+  margin: 0 auto 48px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  .articlePageTitleInfoSection {
+    padding-top: 295px;
+
+    .articleImageWrapper {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .contentWrapper {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+
+      .content {
+        background-color: var(--color-brand-secondary-light-brown);
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        gap: 24px;
+        color: var(--color-text-primary);
+
+        .articleTag {
+          padding: 6px 12px;
+          background-color: var(--color-background-primary);
+          color: var(--color-text-primary);
+
+          @media (max-width: 640px) {
+            font-weight: 350;
+          }
+        }
+
+        .titleAreaWrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          text-align: center;
+
+          .articleTitle {
+            font-family: var(--typography-display-x-large-desktop-font-family);
+            font-size: var(--typography-display-x-large-desktop-font-size);
+            line-height: var(--typography-display-x-large-desktop-line-height);
+            letter-spacing: var(--typography-display-x-large-desktop-letter-spacing);
+          }
+
+          .articleSubTitle {
+            font-weight: 400;
+            font-size: var(--typography-subheading-large-regular-desktop-font-size);
+            line-height: var(--typography-subheading-large-regular-desktop-line-height);
+            letter-spacing: var(--typography-subheading-large-regular-desktop-letter-spacing);
+          }
+        }
+
+        .articlePublishedAt {
+          font-size: var(--typography-body-bold-font-size);
+          font-weight: var(--typography-body-bold-font-weight);
+          line-height: var(--typography-body-bold-line-height);
+          letter-spacing: var(--typography-body-bold-letter-spacing);
+        }
+
+        .authorAndShare {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0;
+          gap: 16px;
+          width: 100%;
+
+          .authorInfo {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+
+            .authorName {
+              font-size: var(--typography-body-large-bold-font-size);
+              font-weight: var(--typography-body-large-bold-font-weight);
+              line-height: var(--typography-body-large-bold-line-height);
+              letter-spacing: var(--typography-body-large-bold-letter-spacing);
+              margin-bottom: 4px;
+            }
+
+            .authorSubtitle {
+              font-weight: 350;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (--desktop-l) {
+    .articlePageTitleInfoSection {
+      padding-top: 290px;
+
+      .articleImageWrapper {
+        height: 37vw;
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .articlePageTitleInfoSection {
+      .contentWrapper {
+        .content {
+          max-width: calc(100% - 274px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 820px) {
+    padding: 0;
+
+    .articlePageTitleInfoSection {
+      padding-top: 252px;
+
+      .articleImageWrapper {
+        height: auto;
+
+        img {
+          position: static;
+          transform: initial;
+        }
+      }
+
+      .contentWrapper {
+        .content {
+          max-width: calc(100% - 64px);
+
+          .titleAreaWrapper {
+            .articleTitle {
+              font-size: var(--typography-display-x-large-mobile-font-size);
+              line-height: var(--typography-display-x-large-mobile-line-height);
+            }
+
+            .articleSubTitle {
+              font-size: var(--typography-subheading-regular-mobile-font-size);
+              line-height: var(--typography-subheading-regular-mobile-line-height);
+            }
+          }
+
+          .articlePublishedAt {
+            font-size: var(--typography-body-caption-font-size);
+            line-height: var(--typography-body-caption-line-height);
+          }
+        }
+      }
+    }
+  }
+
+  @media (--mobile) {
+    .articlePageTitleInfoSection {
+      padding-top: 315px;
+
+      .contentWrapper {
+        .content {
+          max-width: calc(100% - 32px);
+          padding: 24px 20px;
+          gap: 16px;
+
+          .authorAndShare {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}

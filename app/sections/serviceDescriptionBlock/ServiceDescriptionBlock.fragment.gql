@@ -1,0 +1,30 @@
+fragment SectionServiceDescriptionBlock on SectionServiceDescriptionBlock {
+  id
+  button {
+    url
+    buttonText
+    openInNewWindow
+    ctaType
+  }
+  descriptionText: description
+  imagePosition
+  heading
+  content {
+    html
+  }
+  desktopImg: desktopImage {
+    height
+    url
+    width
+  }
+  mobileImg: mobileImage {
+    height
+    url
+    width
+  }
+  tabletImg: tabletImage {
+    height
+    url
+    width
+  }
+}

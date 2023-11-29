@@ -1,0 +1,25 @@
+fragment SectionFullWidthImageAndCopy on SectionFullWidthImageAndCopy {
+  adminTitle
+  layout
+  title
+  subtitle
+  copy
+  desktopImg: desktopImage {
+    altText
+    url
+    height
+    width
+  }
+  mobileImage {
+    altText
+    url
+    height
+    width
+  }
+  ctaButton: cta {
+    buttonText
+    ctaType
+    openInNewWindow
+    url
+  }
+}

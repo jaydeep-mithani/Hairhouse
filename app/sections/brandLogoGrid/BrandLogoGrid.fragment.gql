@@ -1,0 +1,27 @@
+fragment BrandLogoGrid on BrandLogoGrid {
+  id
+  subtext
+  hdText: headingText
+  brandsBrands {
+    ... on BrandsBrandLogo {
+      ...BrandsBrandLogo
+    }
+  }
+  carousel
+  cta {
+    buttonText
+    ctaType
+    id
+    url
+    openInNewWindow
+  }
+}
+
+fragment BrandsBrandLogo on BrandsBrandLogo {
+  brandName
+  brandTags
+  brandLogo {
+    url
+  }
+  brandUrl
+}

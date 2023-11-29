@@ -1,0 +1,54 @@
+.root {
+  max-width: 784px;
+  width: 100%;
+  margin: 0 auto 48px;
+
+  @media (max-width: 767px) {
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+
+  @media (--tablet) {
+    padding: 0 32px;
+  }
+
+  .sectionImages {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 0;
+
+    .imageWrapper {
+      max-width: calc(50% - 8px);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &.columnFull {
+        max-width: 100%;
+
+        img {
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+
+      .imageWrapper {
+        max-width: 100%;
+
+        img {
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

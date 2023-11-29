@@ -1,0 +1,36 @@
+.thinText {
+  --typography-body-font-weight: 350;
+}
+
+.wishlistEmpty {
+  background-color: var(--color-brand-secondary-light-brown, #f9f5f0);
+  padding: 60px 0;
+}
+
+.subText {
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.wishListBorder {
+  border: 1px solid var(--color-border-line-primary, #e2e2e2);
+}
+
+.wishListTitle {
+  --typography-subheading-font-size: 18px;
+  --typography-subheading-line-height: 21.6px;
+
+  @media (--tablet-m) {
+    --typography-subheading-font-size: 20px;
+    --typography-subheading-line-height: 24px;
+  }
+}
+
+.wishListImage img {
+  width: 60px;
+  height: 60px;
+
+  @media (--tablet-m) {
+    width: 80px;
+    height: 80px;
+  }
+}

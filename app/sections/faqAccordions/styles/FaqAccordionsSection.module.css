@@ -1,0 +1,94 @@
+.root {
+  margin: 80px auto;
+
+  --typography-heading-font-size: 14px;
+  --accordion-border-color: #e2e2e2;
+  --accordion-title-padding-horizontal: 0px;
+  --accordion-title-padding-var: 0px;
+  --accordion-title-padding-vertical: 18px;
+
+  width: 100%;
+
+  @media (--tablet) {
+    padding: 0 2em;
+  }
+
+  @media (--mobile) {
+    padding: 0 2em;
+  }
+
+  & .accordionTitle {
+    margin: 16px 0;
+    font-family: fakt;
+    text-align: center;
+  }
+
+  & .accountTitle {
+    margin: 0;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+}
+
+.horizontalLayout {
+  display: flex;
+  max-width: 70%;
+  border: none;
+
+  & .accordionTitle {
+    font-family: 'Victor Serif Variable';
+    width: 30%;
+    text-align: left;
+    margin: 0;
+  }
+
+  & .hair_accordian {
+    width: 70%;
+  }
+
+  @media (--tablet) {
+    max-width: 100%;
+
+    & .accordionTitle {
+      font-size: 28px;
+    }
+  }
+
+  @media (--mobile) {
+    display: block;
+    max-width: 100%;
+
+    & .accordionTitle {
+      width: 100%;
+      margin: 16px 0;
+    }
+
+    & .hair_accordian {
+      width: 100%;
+    }
+  }
+}
+
+.hair_accordian > div > div:first-child {
+  border-top: var(--accordion-border-width) solid var(--accordion-border-color);
+}
+
+.verticalLayout {
+  max-width: 932px;
+}
+
+.borderedLayout {
+  border: var(--accordion-border-width) solid var(--accordion-border-color);
+  padding: 50px;
+}
+
+.accountLayout {
+  margin: 0;
+  padding: 0;
+}
+
+.accountItem {
+  --typography-heading-line-height: 19.6px;
+  --accordion-expand-icon-size: 32px;
+  --accordion-title-padding-vertical: 11px;
+}

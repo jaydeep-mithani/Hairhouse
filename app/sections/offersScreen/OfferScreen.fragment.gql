@@ -1,0 +1,23 @@
+fragment SectionsAccordion on SectionsAccordion {
+  id
+  headline
+  accordionLayout
+  accordionSections {
+    ... on AccordionContent {
+      ...AccordionContent
+    }
+  }
+}
+
+fragment AccordionContent on AccordionContent {
+  title
+  content {
+    ... on RichText {
+      ...RichText
+    }
+  }
+}
+
+fragment RichText on RichText {
+  html
+}

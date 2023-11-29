@@ -1,0 +1,28 @@
+fragment SectionCuratedBlog on SectionCuratedBlog {
+  id
+  heading
+  blogItem {
+    ... on BlogTile {
+      ...CuratedBlogTile
+    }
+  }
+}
+
+fragment CuratedBlogTile on BlogTile {
+  id
+  name
+  description {
+    text
+  }
+  image {
+    altText
+    height
+    width
+    url
+  }
+  button {
+    url
+    buttonText
+    id
+  }
+}

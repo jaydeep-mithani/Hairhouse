@@ -1,0 +1,21 @@
+fragment OfferTiles on OfferTiles {
+  name
+  offerItems {
+    heading
+    image {
+      altText
+      url
+      width
+      height
+    }
+    buttonText
+    url
+    topLeftBoxText
+  }
+  cta {
+    buttonText
+    ctaType
+    url
+    openInNewWindow
+  }
+}

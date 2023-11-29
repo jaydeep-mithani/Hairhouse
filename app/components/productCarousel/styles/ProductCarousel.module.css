@@ -1,0 +1,164 @@
+.root {
+  --leftPannelWidth: max(21%, 261px);
+  --rightPannelWidth: calc(100% - var(--leftPannelWidth));
+  --titleWrapperPadding: 0 0 17px;
+  --tabs-nav-item-min-width: var(--leftPannelWidth);
+
+  padding: var(--carouselWrapperPadding, 60px 0);
+  background-color: var(--carouselBackgroundColor, var(--color-background-primary));
+
+  @media (--tablet) {
+    --titleWrapperPadding: 0 16px 25px;
+    --custom-swiper-scrollbar-sides-offset: 32px;
+  }
+
+  @media (--desktop) {
+    --swiperWrapperPaddingBottom: 86px;
+    --titleWrapperPadding: 0 48px 35px 32px;
+
+    padding: var(--carouselWrapperPadding, 100px 0 100px 48px);
+    position: relative;
+  }
+
+  &_top,
+  &_none {
+    --tabs-content-padding: 10px 0;
+
+    @media (--desktop) {
+      padding: var(--carouselWrapperPadding, 100px 0 100px 38px);
+    }
+  }
+
+  &_none {
+    --typography-xLarge-font-size: 24px;
+    --typography-display-x-large-desktop-font-weight: 85;
+    --typography-xLarge-letter-spacing: 0.1px;
+
+    @media (--desktop) {
+      --typography-xLarge-font-size: 30px;
+      --typography-display-x-large-desktop-font-weight: 500;
+      --typography-xLarge-letter-spacing: 0.1px;
+    }
+  }
+}
+
+.customScrollbar {
+  @media (--desktop) {
+    --swiperWrapperPaddingBottom: 37px;
+  }
+}
+
+.tabbedCarouselTitle {
+  padding: 0 15px 7px;
+
+  & u {
+    text-decoration: underline var(--color-brand-primary-salon) 7px;
+  }
+
+  @media (--desktop) {
+    position: absolute;
+    width: var(--leftPannelWidth);
+    padding: 0;
+  }
+}
+
+.tabRoot_left {
+  --tabs-line-size-header-border: 0;
+
+  @media (--desktop) {
+    flex-direction: row !important;
+    gap: 28px;
+  }
+}
+
+.tabRoot_top {
+  --tabs-line-size-header-border: 0;
+
+  .tabsListWrap {
+    flex-direction: column !important;
+
+    @media (--desktop) {
+      flex-direction: row !important;
+      gap: 28px;
+    }
+  }
+
+  .customScrollbar {
+    & > div:first-child {
+      @media (--desktop) {
+        --swiperWrapperPaddingBottom: 0;
+
+        position: absolute;
+        right: 0;
+        top: -64px;
+      }
+    }
+  }
+}
+
+.tabRoot_none {
+  .tabsListWrap {
+    display: none;
+  }
+}
+
+.tabRoot_top,
+.tabRoot_none {
+  :global(.customScrollbar) {
+    --swiper-scrollbar-sides-offset: 16px;
+
+    @media (--desktop) {
+      --swiper-scrollbar-sides-offset: 0;
+    }
+  }
+}
+
+.tabslist {
+  --tabs-nav-item-padding: 13px 15px;
+
+  align-items: center;
+
+  @media (--desktop) {
+    --tabs-nav-item-padding: 21px 0;
+
+    width: var(--leftPannelWidth);
+    transform: translate(0, 2%);
+  }
+}
+
+.tabPanel {
+  --tabs-content-padding: 0px;
+  --tabs-nav-item-padding: 21px 15px;
+
+  @media (--desktop) {
+    width: var(--rightPannelWidth);
+  }
+}
+
+.tabTitle {
+  --tabs-nav-item-text-color: var(--color-text-secondary);
+  --typography-subheading-font-weight-regular: 350;
+  --typography-subheading-font-size: 16px;
+  --tabs-nav-item-text-color-pressed: var(--color-text-secondary);
+  --tabs-nav-item-text-color-active-hover: var(--color-text-primary);
+
+  justify-content: flex-start !important;
+}
+
+.tabTitleActive {
+  --typography-subheading-font-weight-regular: 500;
+
+  & span[data-type='title'] {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+}
+
+.panelTitle {
+  display: flex;
+  gap: 16px;
+
+  & span {
+    text-align: left;
+  }
+}

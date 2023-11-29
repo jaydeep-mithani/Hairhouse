@@ -1,0 +1,1 @@
+export { IGFeed } from './IGFeed'

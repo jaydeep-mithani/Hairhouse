@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Canela Deck Trial';
+  font-display: swap;
+  font-weight: 400;
+  src: url('./fonts/CanelaDeck-Regular-Trial.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Fakt;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./fonts/FaktMedium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Fakt;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./fonts/FaktNormal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Fakt;
+  font-display: swap;
+  font-weight: 350;
+  src: url('./fonts/FaktLight.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Victor Serif';
+  font-display: swap;
+  font-weight: 400;
+  src: url('./fonts/VictorSerif-40Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Victor Serif';
+  font-display: swap;
+  font-weight: 500;
+  src: url('./fonts/VictorSerif-40Regular.woff2') format('woff2');
+}

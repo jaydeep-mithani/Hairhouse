@@ -1,0 +1,51 @@
+.root {
+  position: relative;
+  width: 100%;
+  padding: 56px 105px;
+  margin: 0 auto;
+
+  .blogPageGrid {
+    max-width: 1027px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin: 0 auto;
+
+    .gridItemArticle {
+      width: calc((100% - 64px) / 3);
+    }
+  }
+
+  .paginationWrapper {
+    margin: 40px auto;
+
+    .pagination {
+      --pagination-arrow-border-color: transparent;
+      --pagination-border-radius: 0;
+      --pagination-border-color-hover: transparent;
+
+      gap: 4px;
+
+      & button[disabled] {
+        display: none;
+      }
+    }
+  }
+
+  @media (--tablet) {
+    padding: 32px;
+  }
+
+  @media (--mobile) {
+    padding: 20px 16px;
+
+    .blogPageGrid {
+      flex-direction: column;
+      gap: 16px;
+
+      .gridItemArticle {
+        width: 100%;
+      }
+    }
+  }
+}

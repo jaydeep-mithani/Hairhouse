@@ -1,0 +1,1 @@
+export { SectionBlogGrid } from './SectionBlogGrid'

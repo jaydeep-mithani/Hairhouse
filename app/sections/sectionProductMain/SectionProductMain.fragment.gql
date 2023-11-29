@@ -1,0 +1,4 @@
+fragment SectionProductMain on SectionProductMain {
+  id
+  __typename
+}

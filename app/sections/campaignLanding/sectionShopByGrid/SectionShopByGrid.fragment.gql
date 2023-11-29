@@ -1,0 +1,23 @@
+fragment SectionShopByGrid on SectionShopByGrid {
+  id
+  title
+  description
+  categoryTiles {
+    ... on EditorialItem {
+      ...EditorialItem
+    }
+  }
+}
+
+fragment EditorialItem on EditorialItem {
+  heading
+  url
+  description
+  image {
+    altText
+    height
+    size
+    width
+    url
+  }
+}

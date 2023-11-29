@@ -1,0 +1,26 @@
+fragment SocialMediaCtaLarge on SocialMediaCtaLarge {
+  id
+  adminTitle
+  handle
+  ctaText
+  platformLinks {
+    ... on LinkIcon {
+      linkUrl
+      openInNewWindow
+      iconFile {
+        url
+        fileName
+      }
+    }
+  }
+  imageGrid {
+    ... on Asset {
+      url
+      fileName
+      altText
+    }
+  }
+  fullWidthTemplates {
+    url
+  }
+}

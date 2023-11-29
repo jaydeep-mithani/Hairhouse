@@ -1,0 +1,16 @@
+fragment EmployeeBenefits on SectionIconsWithText {
+  adminTitle
+  backgroundColour {
+    hex
+  }
+  iconsAndText {
+    adminTitle
+    icon {
+      altText
+      url
+      width
+      height
+    }
+    headingText
+  }
+}

@@ -1,0 +1,127 @@
+.root {
+  --typography-heading-font-size: 14px;
+  --accordion-border-width: 1px;
+  --accordion-border-color: #e2e2e2;
+  --accordion-title-padding-horizontal: 0px;
+  --accordion-title-padding-var: 0px;
+  --accordion-title-padding-vertical: 18px;
+  --accordion-expand-icon-size: 20px;
+
+  width: 100%;
+  padding: 40px 16px;
+
+  @media (--desktop) {
+    width: 70vw;
+    margin: 84px auto 100px;
+    padding: 0;
+  }
+
+  & .accordionTitle {
+    padding: 0 0 20px;
+    color: var(--color-text-primary);
+    text-align: center;
+    font-family: var(--typography-page-heading-desktop-font-family);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+
+    @media (--tablet-m) {
+      padding: 16px 0;
+      font-size: 25px;
+      line-height: normal;
+    }
+
+    --typography-large-font-weight: 500;
+  }
+}
+
+.horizontalLayout {
+  display: flex;
+  max-width: 70%;
+  border: none;
+
+  & .accordionTitle {
+    font-family: 'Victor Serif Variable';
+    width: 30%;
+    text-align: left;
+    margin: 0;
+  }
+
+  & .hair_accordian {
+    width: 70%;
+  }
+
+  @media (--tablet) {
+    max-width: 100%;
+
+    & .accordionTitle {
+      font-size: 28px;
+    }
+  }
+
+  @media (--mobile) {
+    display: block;
+    max-width: 100%;
+
+    & .accordionTitle {
+      width: 100%;
+      margin: 16px 0;
+    }
+
+    & .hair_accordian {
+      width: 100%;
+    }
+  }
+}
+
+.verticalLayout {
+  max-width: 932px;
+}
+
+.accordionItem {
+  border-top: var(--accordion-border-width) solid var(--accordion-border-color);
+  border-bottom: var(--accordion-border-width) solid var(--accordion-border-color);
+
+  button {
+    width: 100%;
+    padding: 18px 8px;
+
+    &[aria-expanded='true'] {
+      + div > div {
+        padding: 0 25px 12px 8px;
+      }
+    }
+  }
+
+  button > span:first-of-type,
+  & > div > div {
+    font-family: var(--typography-page-heading-desktop-font-family);
+    font-size: 14px;
+    font-style: normal;
+    line-height: 140%;
+    letter-spacing: 0.07px;
+  }
+
+  button > span {
+    &:first-of-type {
+      width: 100%;
+      color: var(--color-text-primary);
+    }
+  }
+
+  & > div > div {
+    color: var(--color-text-secondary);
+    font-weight: 350;
+
+    a {
+      text-decoration: underline;
+
+      &:active,
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

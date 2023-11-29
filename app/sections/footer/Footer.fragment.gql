@@ -1,0 +1,81 @@
+fragment Footer on FooterConfig {
+  androidAppStoreUrl
+  iOsAppStoreUrl
+  instagramUrl
+  facebookUrl
+  tiktokUrl
+  youtubeUrl
+  footerLogo {
+    id
+    altText
+    url
+    mimeType
+  }
+  paymentLogos {
+    height
+    url
+    width
+    altText
+    id
+  }
+  styleSocietyHeading
+  styleSocietyCta {
+    id
+    linkText
+    openInNewWindow
+    url
+  }
+  styleSocietyContent
+  socialLinksHeadingText
+  legalLinks {
+    id
+    linkText
+    openInNewWindow
+    url
+  }
+  helpCentreBox {
+    html
+    text
+  }
+  footerLinks {
+    ... on LinkCollection {
+      id
+      links {
+        url
+        openInNewWindow
+        linkText
+        id
+      }
+      headingLink {
+        url
+        openInNewWindow
+        linkText
+        id
+      }
+    }
+  }
+  acknowledgementTitle
+  acknowledgementContent {
+    html
+    text
+  }
+  assistanceCtAs {
+    buttonText
+    ctaType
+    id
+    openInNewWindow
+    url
+  }
+  uniqueSellingPoints {
+    description
+    headingText
+    id
+    uspIcon {
+      height
+      url
+      width
+      altText
+      id
+    }
+  }
+}

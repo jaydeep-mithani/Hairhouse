@@ -1,0 +1,1 @@
+export { CompareAtPrice } from './CompareAtPrice'

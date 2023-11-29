@@ -1,0 +1,8 @@
+export { default as ChevronRight } from './ChevronRight'
+export { PlusCircle } from './PlusCircle'
+export { MinusCircle } from './MinusCircle'
+export { FacebookIcon } from './FacebookIcon'
+export { TwitterIcon } from './TwitterIcon'
+export { PinterestIcon } from './PinterestIcon'
+export { Location } from './Location'
+export { Close } from './Close'

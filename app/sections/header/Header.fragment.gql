@@ -1,0 +1,137 @@
+#import "../../components/CustomerLogin.fragment.gql"
+
+fragment Header on HeaderConfig {
+  id
+  logo {
+    id
+    altText
+    url
+    mimeType
+  }
+  megaMenu {
+    navigationItems(first: 15) {
+      id
+      headingText
+      name
+      url
+      menuColumn1 {
+        id
+        name
+        bottomLinkText
+        shopAllUrl
+        menurow {
+          id
+          headingText
+          name
+          url
+          menuColumn2 {
+            id
+            name
+            bottomLinkText
+            shopAllUrl
+            menuRow {
+              id
+              headingText
+              name
+              url
+              menuColumn2 {
+                id
+                name
+                bottomLinkText
+                shopAllUrl
+                menuRow {
+                  id
+                  headingText
+                  name
+                  url
+                }
+              }
+            }
+          }
+        }
+        pageBlogArticles {
+          id
+          url
+          title
+          shortDescription
+          image {
+            altText
+            url
+          }
+          blog {
+            title
+          }
+        }
+        offerTiles {
+          id
+          name
+          image {
+            altText
+            url
+          }
+          link {
+            linkText
+            url
+          }
+        }
+      }
+    }
+  }
+  mobileMenuFooter {
+    id
+    adminTitle
+    imageLink
+    promoImage {
+      url
+    }
+  }
+  brandsBrandsLogos {
+    id
+    brandName
+    brandUrl
+    brandLogo {
+      id
+      url
+    }
+  }
+  promoBarContent {
+    text
+    html
+  }
+  promoBarExpiry
+  promoBarBackgroundColour {
+    ... on Color {
+      ...PromoBarBackgroundColour
+    }
+  }
+  storeLocatorLinks {
+    id
+    name
+    storeLocatorLinks(first: 15) {
+      id
+      linkText
+      url
+      openInNewWindow
+    }
+  }
+  sectionAccountSignupCta {
+    ...SectionAccountSignupCta
+  }
+}
+
+fragment PromoBarBackgroundColour on Color {
+  css
+  hex
+  rgba {
+    ... on RGBA {
+      ...RGBA
+    }
+  }
+}
+
+fragment RGBA on RGBA {
+  a
+  b
+  g
+  r
+}

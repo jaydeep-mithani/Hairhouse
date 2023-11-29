@@ -1,0 +1,19 @@
+fragment SectionProductCompare on SectionProductCompare {
+    id
+    title
+    collections {
+      ... on ProductCompareTable {
+        id
+        displayTitle
+        collectionHandle
+      }
+    }
+    tableRows {
+      __typename
+      ... on MetafieldListItem {
+        id
+        metafieldLabel
+        metafieldReference
+      }
+    }
+}

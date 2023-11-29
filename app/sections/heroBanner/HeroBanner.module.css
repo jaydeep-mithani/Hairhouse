@@ -1,0 +1,327 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+
+  @media (--desktop) {
+    flex-direction: row;
+    padding: 20px 48px;
+  }
+}
+
+.root.layout_text_block_left {
+  padding: 40px 0;
+
+  @media (--desktop) {
+    flex-direction: row-reverse;
+    padding: 40px 28px 40px 48px;
+  }
+
+  .heroTextBlock {
+    padding: 20px;
+
+    @media (--tablet-m) {
+      max-width: 515px;
+      width: 100%;
+      padding: 50px;
+    }
+
+    @media (--desktop) {
+      margin: 39px -80px 39px 0;
+    }
+  }
+
+  .breadcrumbs {
+    padding-bottom: 20px;
+
+    @media (--desktop) {
+      padding: 0 0 25px;
+    }
+
+    & + .logo {
+      @media (--desktop) {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .descriptionText {
+    color: var(--color-text-secondary);
+  }
+
+  .buttonWrapper {
+    button:only-child {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.logo {
+  height: 33px;
+  max-width: fit-content;
+  object-fit: contain;
+  padding-bottom: 2px;
+
+  @media (--tablet-m) {
+    height: 38px;
+  }
+}
+
+.heroImageMobile {
+  @media (--tablet), (--desktop) {
+    display: none;
+  }
+}
+
+.heroImageDesktop {
+  object-fit: cover;
+
+  @media (--mobile) {
+    display: none;
+  }
+
+  @media (--desktop-s) {
+    max-width: calc(100% - 385px);
+  }
+}
+
+.buttonWrapper {
+  @media (--desktop) {
+    padding: 24px 0 0;
+  }
+}
+
+.heroTextBlock {
+  background-color: var(--color-brand-secondary-light-brown);
+  padding: 32px 20px;
+  margin: -20px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+
+  @media (--desktop) {
+    width: 100%;
+    max-width: 478px;
+    padding: 100px 80px;
+    margin: 27px 0 27px -80px;
+  }
+
+  .featuresList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & li {
+      display: flex;
+      gap: 12px;
+      flex-direction: row;
+      align-items: center;
+
+      .featureItemtext {
+        font-weight: 350;
+        color: var(--color-text-primary);
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  color: var(--color-text-secondary);
+  @media (--desktop) {
+    padding: 0 0 25px;
+  }
+
+  & + .logo {
+    @media (--desktop) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.titleText {
+  padding: 10px 0 7px;
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--color-text-primary, #000);
+  font-family: var(--typography-display-x-large-desktop-font-family);
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: 0.1px;
+
+  @media (--tablet-m) {
+    font-weight: 85;
+    font-size: 48px;
+  }
+}
+
+.titleTextSecondary {
+  --typography-large-font-weight: 500;
+
+  padding: 19px 0 10px;
+}
+
+.titleTextNumberedList {
+  --typography-medium-font-family-stack: 'Victor Serif';
+  --typography-medium-font-weight: 85;
+
+  padding: 13px 4px 25px;
+
+  @media (--mobile), (--tablet) {
+    --typography-medium-font-size: var(--typography-display-large-mobile-font-size);
+    --typography-medium-line-height: var(--typography-display-large-mobile-line-height);
+  }
+
+  @media (--desktop) {
+    margin-left: 0 !important;
+    padding: 0 0 25px;
+  }
+}
+
+.titleTextTertiary {
+  max-width: 250px;
+  padding: 0;
+
+  & u {
+    text-decoration: none;
+    box-shadow: inset 0 -8px 0 0 var(--highlightColour);
+  }
+
+  @media (--tablet-m) {
+    max-width: 300px;
+  }
+}
+
+.descriptionText {
+  font-weight: 350 !important;
+  font-size: 16px;
+  line-height: 22.4px;
+  color: var(--color-text-primary, #000);
+}
+
+.descriptionTextSecondary {
+  --typography-bodyLarge-font-size: var(--typography-body-regular-font-size);
+  --typography-bodyLarge-line-height: var(--typography-body-regular-line-height);
+  --typography-bodyLarge-letter-spacing: var(--typography-body-regular-letter-spacing);
+
+  color: var(--color-text-secondary);
+
+  & ul {
+    padding: 17px 0 17px 27px !important;
+
+    & li::marker {
+      content: url('../../../public/tick.svg');
+    }
+  }
+
+  & li {
+    padding: 11px 0 11px 17px;
+  }
+}
+
+.descriptionTextTertiary {
+  & ul {
+    padding: 24px 0 !important;
+
+    & li::marker {
+      content: '';
+    }
+  }
+
+  & li {
+    padding: 0 0 8px 36px;
+    position: relative;
+  }
+
+  & li::before {
+    content: url('../../../public/tickSmall.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.descriptionTextNumberedList {
+  color: var(--color-text-primary);
+
+  & li {
+    counter-increment: count 1;
+    display: flex;
+    gap: 25px;
+  }
+
+  & li::before {
+    content: counter(count, decimal);
+    min-width: 28px;
+    font-family: var(--typography-display-x-large-desktop-font-family);
+    font-weight: 850 !important;
+    font-size: var(--typography-display-x-large-mobile-font-size);
+    line-height: var(--typography-display-x-large-mobile-line-height);
+
+    @media (--desktop) {
+      font-size: var(--typography-display-x-large-desktop-font-size);
+      line-height: var(--typography-display-x-large-desktop-line-height);
+    }
+  }
+
+  & li > div {
+    padding-bottom: 20px;
+    color: var(--color-text-secondary);
+
+    & a {
+      text-decoration: underline;
+    }
+
+    @media (--desktop) {
+      padding-bottom: 22px;
+    }
+  }
+
+  & li > div > strong {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px;
+    color: var(--color-text-primary);
+  }
+}
+
+.buttonWrapper {
+  --btn-solid-color-bg-primary-hover: var(--color-brand-secondary-light-brown);
+  --btn-size-md-height: 45px;
+
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 20px;
+
+  @media (--desktop) {
+    padding: 60px 0 0;
+  }
+}
+
+.button {
+  min-width: 145.5px;
+
+  @media (--desktop) {
+    min-width: 152.5px;
+  }
+}
+
+.buttonWrapperTertiary {
+  padding: 0;
+  margin-top: 6px;
+}
+
+.buttonTertiary {
+  @media (--desktop) {
+    min-width: 170px;
+  }
+}
+
+.buttonWrapperNumberedList {
+  @media (--mobile), (--tablet) {
+    display: none;
+  }
+}

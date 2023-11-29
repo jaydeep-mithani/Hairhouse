@@ -1,0 +1,11 @@
+.mobileImage {
+  @media (--desktop), (--tablet) {
+    display: none;
+  }
+}
+
+.desktopImage {
+  @media (--mobile) {
+    display: none;
+  }
+}

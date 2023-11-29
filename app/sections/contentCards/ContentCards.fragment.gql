@@ -1,0 +1,36 @@
+#import "../graphql/sections/shared-fragments/card/CardModule.fragment.gql"
+
+fragment SectionContentCard on SectionContentCard {
+  headingText
+  adminTitle
+  cards {
+    button {
+      buttonText
+      ctaType
+      id
+      openInNewWindow
+      url
+    }
+    buttons {
+      buttonText
+      ctaType
+      openInNewWindow
+      url
+      id
+    }
+    contentAlignment
+    heading
+    id
+    image {
+      altText
+      height
+      url
+      width
+    }
+    imagePosition
+    imageWidth
+    text {
+      html
+    }
+  }
+}

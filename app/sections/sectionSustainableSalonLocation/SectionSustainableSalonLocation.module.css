@@ -1,0 +1,46 @@
+.root {
+  max-width: 1230px;
+  margin-inline: auto;
+  padding: 100px 20px;
+  text-align: center;
+
+  & h6 {
+    margin-bottom: 12px;
+    color: #4a4f53;
+    font-weight: 500;
+  }
+
+  & h1 {
+    margin-bottom: 40px;
+    color: #000;
+
+    @media (--mobile) {
+      margin-bottom: 20px;
+    }
+  }
+
+  & .locationsWraper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 30px;
+
+    @media (--tablet) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (--mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+      column-gap: 50px;
+    }
+  }
+
+  & .locationsWraper > div {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (--tablet), (--mobile) {
+    padding: 60px 20px;
+  }
+}

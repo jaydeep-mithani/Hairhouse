@@ -1,0 +1,137 @@
+.login {
+  margin: 40px auto 0;
+  padding: 0 48px;
+  max-width: 488px;
+
+  .formBlock {
+    margin-bottom: 40px;
+
+    .title {
+      margin-bottom: 12px;
+    }
+
+    .description {
+      color: var(--color-text-secondary, #4a4f53);
+    }
+
+    .form {
+      margin-top: 24px;
+    }
+
+    .inputBlock {
+      margin-bottom: 12px;
+
+      .input {
+        :global(.Base-Input--LabelActive) {
+          top: 13px;
+        }
+      }
+    }
+
+    .inputBlock input {
+      padding: 18px 12px 0;
+      border: 1px solid var(--color-interactive-action-field, #d9d9d9);
+      border-radius: 3px;
+      font-size: var(--typography-body-regular-font-size, 14px);
+      line-height: var(--typography-body-regular-line-height, 19.6px);
+    }
+
+    .inputBlock input[type='password'] {
+      padding: 18px 12px 0 0;
+      border: none;
+    }
+
+    .inputBlockPassword {
+      input {
+        padding-left: 0;
+      }
+
+      :global(.Base-Input--LabelActive) {
+        top: 9px;
+      }
+    }
+
+    .inputBlock input::placeholder {
+      color: var(--color-text-field-placeholder, #737373);
+    }
+
+    .errorText {
+      color: var(--color-state-critical, #d82c0d);
+    }
+
+    .loggedInMessage {
+      text-align: left;
+    }
+
+    .btnLogin {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .fogotBtnWrap {
+      text-align: center;
+    }
+
+    .fogotBtn {
+      --btn-link-text-decoration: underline;
+      --btn-line-height: var(--typography-body-regular-line-height);
+
+      text-underline-offset: 8px;
+    }
+
+    @media (--mobile) {
+      margin-bottom: 32px;
+
+      .title {
+        display: none;
+      }
+    }
+  }
+
+  .textBlock {
+    width: 100%;
+    max-width: 488px;
+    padding: 32px 20px;
+    margin-left: 0;
+
+    & h2 {
+      color: var(--color-text-primary);
+      padding-top: 0;
+      padding-bottom: 24px;
+
+      & u {
+        text-decoration-color: var(--color-interactive-action-focus);
+        text-decoration-thickness: 4px;
+        text-decoration-skip-ink: none;
+        text-underline-offset: 0;
+        display: block;
+      }
+
+      @media (--mobile) {
+        --typography-medium-font-size: var(--typography-display-medium-mobile-font-size);
+        --typography-medium-line-height: var(--typography-display-medium-mobile-line-height);
+      }
+    }
+
+    & > div:last-child {
+      padding-top: 32px;
+      padding-bottom: 0;
+      gap: 12px;
+    }
+
+    a[class~='Base-Button'] {
+      min-width: calc(50% - 6px);
+    }
+
+    @media (--mobile), (--tablet) {
+      & > div:last-child {
+        display: flex;
+      }
+    }
+  }
+
+  @media (--mobile) {
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,68 @@
+.product_images_slider {
+  @media (--desktop) {
+    max-width: 660px;
+  }
+
+  @media (max-width: 767px) {
+    overflow-x: hidden;
+  }
+
+  :global(.swiper-slide) {
+    cursor: url('https://media.graphassets.com/iUJkLiuVRhWmH0oim2Gy'), auto !important;
+  }
+
+  :global(.swiper-button-prev) {
+    color: #000;
+  }
+
+  :global(.swiper-button-next) {
+    color: #000;
+  }
+}
+
+.cardLabel {
+  --cardLabelSize: 45px;
+  --typography-caption-font-weight: 700;
+  --typography-caption-font-size: 12px;
+  --typography-caption-line-height: 12px;
+
+  color: var(--color-text-action-primary);
+  background-color: var(--color-background-accent-01);
+  position: absolute;
+  width: var(--cardLabelSize);
+  height: var(--cardLabelSize);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_images_slider_thumbs {
+  height: 100vh !important;
+  width: max-content;
+  margin: revert;
+
+  @media (max-width: 767px) {
+    display: none !important;
+  }
+
+  :global(.swiper-slide) {
+    cursor: pointer;
+    margin-bottom: 20px !important;
+  }
+
+  :global(.swiper-slide-thumb-active) {
+    border: 1px solid #000 !important;
+  }
+}
+
+.scrollbar_hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar_hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  cursor: url('https://media.graphassets.com/8LQLOQjQd2j37Og4NgPG'), auto;
+}

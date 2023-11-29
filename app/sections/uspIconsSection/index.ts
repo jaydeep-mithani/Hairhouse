@@ -1,0 +1,1 @@
+export { UspIconsSection } from './UspIconsSection'

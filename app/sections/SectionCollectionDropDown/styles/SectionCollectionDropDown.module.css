@@ -1,0 +1,92 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-background-accent-01);
+  color: var(--color-text-action-primary);
+  padding: 40px 16px;
+  gap: 16px;
+
+  @media (--desktop) {
+    padding: 80px 168.5px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 47px;
+  }
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  line-height: 28.01px;
+
+  @media (--desktop) {
+    --typography-large-font-size: var(--typography-display-x-large-desktop-font-size);
+    --typography-large-line-height: var(--typography-display-x-large-desktop-line-height);
+
+    text-align: left;
+  }
+}
+
+.select {
+  --select-text-color: var(--color-text-action-primary);
+  --select-border-color: var(--color-text-action-primary);
+  --select-border-color-hover: var(--color-text-action-primary);
+  --select-placeholder-color: var(--color-text-action-primary);
+  --select-md-font-size: var(--typography-display-x-large-mobile-font-size);
+  --select-md-height: 60px;
+
+  padding: 12px 16px;
+  font-size: 35px;
+  line-height: 42px;
+  border: none !important;
+  border-bottom: 2px solid var(--color-text-action-primary) !important;
+  font-family: var(--typography-display-x-large-desktop-font-family);
+  overflow-y: hidden;
+
+  & input {
+    padding: 0 8px;
+  }
+
+  @media (--desktop) {
+    --select-md-height: 80px;
+    --select-md-font-size: var(--typography-display-x-large-desktop-font-size);
+
+    max-width: 540px;
+    margin: 0;
+  }
+}
+
+.selectArrow svg {
+  @media (--desktop) {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+.selectSuffix {
+  margin-left: -38px !important;
+}
+
+.options {
+  font-size: 30px !important;
+  line-height: 28.8px;
+  letter-spacing: 0.1px;
+  border-bottom: 1px solid #4a4f53;
+  color: var(--color-text-primary);
+}
+
+.button {
+  background-color: var(--color-background-primary) !important;
+  color: var(--color-text-primary) !important;
+
+  --btn-size-md-height: 45px;
+
+  min-width: 100%;
+
+  @media (--desktop) {
+    min-width: 143px;
+  }
+}

@@ -1,0 +1,60 @@
+.root {
+  --titleWrapperPadding: 0 0 17px;
+
+  padding: 60px 0 40px;
+  background-color: var(--carouselBackgroundColor, var(--color-background-primary));
+
+  .carouselWrapper {
+    :global(.customScrollbar) {
+      --swiper-scrollbar-sides-offset: 16px;
+
+      left: 0;
+
+      @media (--mobile) {
+        --swiper-scrollbar-sides-offset: 8px;
+      }
+    }
+
+    .relatedProductCarousel {
+      :global(.swiper-wrapper) {
+        --swiperWrapperPaddingBottom: 32px;
+      }
+
+      & > div:first-child,
+      & > div:first-child > p {
+        padding-left: 0;
+      }
+
+      & > div:first-child > p {
+        font-family: var(--typography-display-large-desktop-font-family);
+        font-size: var(--typography-display-large-desktop-font-size);
+        line-height: 120%;
+        letter-spacing: var(--typography-display-large-desktop-letter-spacing);
+
+        @media (--mobile), (--tablet) {
+          font-size: var(--typography-display-large-mobile-font-size);
+        }
+      }
+    }
+  }
+
+  @media (--tablet) {
+    --titleWrapperPadding: 0 16px 25px;
+    --custom-swiper-scrollbar-sides-offset: 32px;
+
+    padding-left: 32px;
+    padding-right: 0;
+  }
+
+  @media (--mobile) {
+    padding-left: 16px;
+    padding-right: 0;
+  }
+
+  @media (--desktop) {
+    --swiperWrapperPaddingBottom: 32px;
+    --titleWrapperPadding: 0 48px 35px 32px;
+
+    padding: 60px 12px 40px 48px;
+  }
+}

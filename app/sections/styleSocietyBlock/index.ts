@@ -1,0 +1,1 @@
+export { StyleSocietyBlock } from './StyleSocietyBlock'

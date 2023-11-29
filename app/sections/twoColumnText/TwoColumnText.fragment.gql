@@ -1,0 +1,10 @@
+fragment TwoColumnText on SectionSeoText {
+  adminTitle
+  content {
+    html
+  }
+  colun2Content {
+    html
+  }
+  textLayout
+}

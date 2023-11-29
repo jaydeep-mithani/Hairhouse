@@ -1,0 +1,39 @@
+.container {
+  background: var(--color-brand-secondary-light-brown, #f9f5f0);
+  padding: 80px 64px;
+  margin: 100px 0;
+  text-align: center;
+
+  @media (--mobile) {
+    padding: 40px 16px;
+    margin: 60px 0;
+  }
+
+  .title,
+  .suburb {
+    font-weight: var(--typography-page-heading-desktop-font-weight);
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .suburb {
+    @media (--mobile) {
+      font-size: var(--typography-body-large-bold-font-size);
+      line-height: var(--typography-body-regular-line-height);
+    }
+  }
+}
+
+.suburbsList {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 32px 80px;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media (--mobile) {
+    grid-template-columns: repeat(2, auto);
+  }
+}

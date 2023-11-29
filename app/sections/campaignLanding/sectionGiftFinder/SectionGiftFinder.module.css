@@ -1,0 +1,132 @@
+.root {
+  padding: 100px 72px;
+  margin: 1rem 0;
+
+  @media (--tablet), (--mobile) {
+    padding: 60px 0;
+  }
+
+  & h3 {
+    font-family: Fakt, sans-serif;
+    font-size: 25px;
+    line-height: 33px;
+    font-weight: 500;
+    color: white;
+    max-width: 864px;
+    margin: 0 auto;
+    padding-bottom: 96px;
+
+    @media (--tablet), (--mobile) {
+      padding: 0 32px;
+      padding-bottom: 60px;
+    }
+  }
+
+  & .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (--tablet), (--mobile) {
+      flex-direction: column;
+    }
+  }
+
+  & .image_img {
+    width: 100%;
+    max-width: 832px;
+    max-height: 561px;
+    order: 2;
+    object-fit: cover;
+
+    @media (--tablet), (--mobile) {
+      max-width: 100%;
+      max-height: 268px;
+      order: 1;
+    }
+  }
+
+  & .question_template {
+    order: 1;
+    height: 100%;
+    max-height: fit-content;
+    width: 100%;
+    max-width: 547px;
+    margin-right: -5%;
+    z-index: 2;
+    background-color: #f9f5f0;
+
+    @media (--tablet), (--mobile) {
+      max-height: fit-content;
+      width: 100%;
+      max-width: 343px;
+      margin-right: 0;
+      margin-top: -5%;
+      order: 2;
+    }
+  }
+
+  & .question_detail {
+    padding: 50px;
+    max-height: 386px;
+
+    @media (--tablet), (--mobile) {
+      padding: 40px 20px;
+    }
+  }
+
+  & h6 {
+    padding-bottom: 12px;
+  }
+
+  & h5 {
+    padding-bottom: 51.2px;
+
+    @media (--tablet), (--mobile) {
+      padding-bottom: 30px;
+    }
+  }
+
+  & .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 59px;
+
+    @media (--tablet), (--mobile) {
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  & .options div {
+    text-align: center;
+    max-width: 120px;
+    min-height: 160px;
+  }
+
+  & .options img {
+    margin: 0 auto;
+    padding-bottom: 19.2px;
+    max-width: 89.6px;
+  }
+
+  & .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .buttons button {
+    width: 50%;
+    border-radius: 0;
+    background-color: #f9f5f0;
+    border-top: 1px solid #e2e2e2;
+    color: #000;
+
+    &:last-child {
+      border-left: 1px solid #e2e2e2;
+    }
+  }
+}

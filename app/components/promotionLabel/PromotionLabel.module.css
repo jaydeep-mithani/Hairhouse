@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  align-items: center;
+  border-radius: 500px;
+  height: 45px;
+  width: 45px;
+  font-family: var(--typography-label-font-family);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  color: var(--color-text-action-primary);
+  text-align: center;
+}

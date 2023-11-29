@@ -1,0 +1,69 @@
+.buttonLink {
+  --btn-size-md-height: fit-content;
+  --btn-size-md-padding: 0px;
+}
+
+.thinText {
+  --typography-body-font-weight: 350;
+  --typography-caption-font-weight: 350;
+}
+
+.greyText {
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.rewardCard {
+  color: var(--color-text-action-primary, #fff);
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rewardsGragient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 258px;
+  width: 100%;
+  z-index: 15;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 36.46%, rgba(0, 0, 0, 60%) 79.69%);
+}
+
+.border {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-text-action-primary, #fff);
+  margin-bottom: 8px;
+}
+
+.rewardLinkTitle {
+  --typography-medium-font-size: 24px;
+  --typography-medium-line-height: 28.8px;
+}
+
+.coupon {
+  --typography-medium-font-size: 20px;
+  --typography-medium-line-height: 24px;
+  --typography-medium-font-weight: 85;
+}
+
+.couponLink {
+  --btn-link-text-decoration-hover: none;
+}
+
+.couponLinkText {
+  --typography-caption-text-decoration: underline;
+}
+
+.description {
+  --typography-bodyLarge-font-size: 14px;
+  --typography-bodyLarge-line-height: 19.6px;
+
+  @media (--tablet-m) {
+    --typography-bodyLarge-font-size: 16px;
+    --typography-bodyLarge-line-height: 22.4px;
+  }
+}

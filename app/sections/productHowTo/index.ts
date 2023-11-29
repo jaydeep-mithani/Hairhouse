@@ -1,0 +1,1 @@
+export { ProductHowTo } from './ProductHowTo'

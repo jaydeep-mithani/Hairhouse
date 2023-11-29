@@ -1,0 +1,71 @@
+.tilesContainer {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.root {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  margin: 16px;
+
+  @media (--desktop) {
+    margin: 16px;
+    margin: 64px 48px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tileContent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.descriptionText {
+  --color-text-primary: var(--color-grayscale-white);
+  --typography-heading-font-size: 18px;
+  --typography-heading-line-height: 21.6px;
+
+  margin: auto 0 0 !important;
+}
+
+.tile {
+  padding: 36px 32px;
+  min-height: 163px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (--mobile) {
+    padding: 24px;
+    min-height: 128px;
+  }
+}
+
+.buttonCTA {
+  --btn-size-md-padding: 0 0 0 16px;
+  --btn-font-size: 16px;
+  --btn-size-md-height: 22px;
+  --btn-font-weight: 350;
+  --btn-line-height: 22.4px;
+
+  color: var(--color-grayscale-white) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 5px !important;
+
+  &:hover {
+    color: var(--btn-link-color-hover) !important;
+  }
+}
+
+.imageContainer {
+  width: 24px;
+  height: 24px;
+
+  @media (--desktop) {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,26 @@
+fragment Roles on SectionFeaturedPositionsBlock {
+  heading
+  bkgColor: backgroundColour {
+    hex
+  }
+  positions {
+    heading
+    image {
+      altText
+      url
+      width
+      height
+    }
+    text {
+      html
+    }
+    contentAlignment
+    imagePosition
+    imageWidth
+    button {
+      buttonText
+      ctaType
+      openInNewWindow
+    }
+  }
+}

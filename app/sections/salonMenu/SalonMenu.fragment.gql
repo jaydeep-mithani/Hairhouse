@@ -1,0 +1,25 @@
+
+fragment SectionSalonMenu on SectionSalonMenu {
+  id
+  menus {
+    ... on MenuType {
+      ...MenuType
+    }
+  }
+}
+
+fragment MenuType on MenuType {
+  name
+  menuSublist {
+    sublistItems {
+      ... on MenuSublistItem {
+        ...MenuSublistItem
+      }
+    }
+  }
+}
+
+fragment MenuSublistItem on MenuSublistItem {
+  title
+  items
+}

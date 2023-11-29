@@ -1,0 +1,103 @@
+.root {
+  margin: 0 auto 48px;
+  max-width: 784px;
+  width: 100%;
+  font-family: var(--typography-body-regular-font-family);
+  border: 1px solid var(--color-border-line-primary);
+  padding: 32px;
+
+  --typography-heading-font-size: 14px;
+  --accordion-border-color: var(--color-border-line-primary);
+  --accordion-title-padding-horizontal: 0px;
+  --accordion-title-padding-var: 0px;
+  --accordion-title-padding-vertical: 18px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 40px;
+  }
+
+  @media (--tablet), (--mobile) {
+    padding: 32px 16px;
+  }
+
+  @media (--tablet) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .accordionSectionHeading {
+    font-family: var(--typography-page-heading-desktop-font-family);
+    font-size: var(--typography-page-heading-desktop-font-size);
+    font-weight: var(--typography-page-heading-desktop-font-weight);
+    line-height: var(--typography-page-heading-desktop-line-height);
+    letter-spacing: var(--typography-page-heading-desktop-letter-spacing);
+    text-align: center;
+  }
+
+  & .accordionTitle {
+    margin: 16px 0;
+    text-align: center;
+  }
+
+  &.horizontalLayout {
+    display: flex;
+    max-width: 70%;
+    border: none;
+
+    & .accordionTitle {
+      font-family: var(-typography-display-x-large-desktop-font-family);
+      width: 30%;
+      text-align: left;
+      margin: 0;
+    }
+
+    & .articlePageAccordion {
+      width: 70%;
+    }
+
+    @media (--tablet) {
+      max-width: 100%;
+
+      & .accordionTitle {
+        font-size: 28px;
+      }
+    }
+
+    @media (--mobile) {
+      display: block;
+      max-width: 100%;
+
+      & .accordionTitle {
+        width: 100%;
+        margin: 16px 0;
+      }
+
+      & .articlePageAccordion {
+        width: 100%;
+      }
+    }
+  }
+
+  &.verticalLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    :global(.Base-Accordion--Item) {
+      --typography-heading-font-size: var(--typography-body-large-bold-font-size);
+      --accordion-title-padding-vertical: 12px;
+      --accordion-content-padding: 0 0 12px;
+
+      line-height: var(--typography-body-large-regular-line-height);
+      padding-left: 8px;
+
+      & div {
+        font-size: var(--typography-body-large-regular-font-size);
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

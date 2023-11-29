@@ -1,0 +1,43 @@
+.root_circle {
+  --typography-caption-font-size: 10px;
+  --typography-caption-font-weight: 500;
+  --typography-caption-line-height: 100%;
+
+  background-color: #2d2d2d;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  padding: 7.5px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;
+  line-height: 100%;
+}
+
+.root_strip {
+  --typography-caption-font-weight: 500;
+  --typography-caption-line-height: 140%;
+
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 2px 0;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.root_price {
+  --typography-caption-font-weight: 500;
+  --typography-caption-line-height: 140%;
+
+  background-color: #c30010;
+  padding: 2px 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}

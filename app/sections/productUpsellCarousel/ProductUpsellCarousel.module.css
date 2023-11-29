@@ -1,0 +1,16 @@
+.root {
+  color: var(--color-text-primary);
+  @media (min-width: 640px) and (max-width: 768px) {
+    :global(.swiper-slide) {
+      max-width: 430px;
+    }
+  }
+}
+
+.title {
+  color: var(--color-text-primary);
+}
+
+.subText {
+  color: var(--color-text-secondary);
+}

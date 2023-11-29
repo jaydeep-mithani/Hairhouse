@@ -1,0 +1,110 @@
+.root {
+  flex-direction: row;
+  padding: 0 3rem;
+  gap: 10px;
+  height: 2.5rem;
+
+  @media (max-width: 640px) {
+    padding: 0.375rem 2rem 0.375rem 1.25rem;
+    height: auto;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_btn {
+  position: absolute;
+  right: 3.0625rem;
+
+  @media (--tablet), (--mobile) {
+    right: 6px;
+  }
+}
+
+.icon {
+  margin-top: 3px;
+}
+
+.promo_wrapper {
+  flex-direction: row;
+  gap: 1.5rem;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    gap: 6px;
+
+    p {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14.4px;
+    }
+  }
+}
+
+.countdown_wrapper {
+  gap: 10px;
+}
+
+.wrapper {
+  align-items: flex-start;
+  padding: 0;
+  gap: 6px;
+}
+
+.wrapper:last-child p {
+  display: none;
+}
+
+.countdown {
+  font-family: var(--typography-heading-font-family-stack, 'Fakt');
+  flex-direction: column;
+  padding: 2px 0;
+  width: 2.5rem;
+  height: 1.75rem;
+  background: rgba(255, 255, 255, 50%);
+  color: var(--color-text-primary);
+}
+
+.time {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 14.4px;
+}
+
+.time_type {
+  font-family: var(--typography-heading-font-family-stack, 'Fakt');
+  font-size: 10px;
+  font-weight: 350;
+  line-height: 12px;
+
+  @media (--mobile) {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.4px;
+  }
+}
+
+.description {
+  & p strong {
+    font-weight: 600;
+    line-height: 16.8px;
+
+    @media (--mobile) {
+      font-weight: 500;
+    }
+  }
+
+  & p {
+    font-weight: 350;
+
+    @media (--mobile) {
+      font-size: 14px;
+      line-height: 19.6px;
+    }
+  }
+}

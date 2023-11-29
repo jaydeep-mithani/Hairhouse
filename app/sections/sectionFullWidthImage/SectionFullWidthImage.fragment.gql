@@ -1,0 +1,9 @@
+fragment SectionFullWidthImage on SectionFullWidthImage {
+  imageLayout
+  images {
+    altText
+    url
+    size
+    mimeType
+  }
+}

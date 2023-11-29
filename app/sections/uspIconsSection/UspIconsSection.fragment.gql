@@ -1,0 +1,27 @@
+fragment UspItem on UspItem {
+  id
+  title
+  quantity
+  icon {
+    altText
+    height
+    width
+    url
+  }
+}
+
+fragment UspSection on UspSection {
+  id
+  heading
+  desc: description {
+    text
+  }
+  bgColour: backgroundColor {
+    hex
+  }
+  items {
+    ... on UspItem {
+      ...UspItem
+    }
+  }
+}

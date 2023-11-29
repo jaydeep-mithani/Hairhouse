@@ -1,0 +1,47 @@
+.wrapper {
+  background-color: var(--color-background-primary, #fff);
+  max-width: 488px;
+  height: 100%;
+}
+
+.cover {
+  background-color: var(--color-background-overlay, rgba(129, 129, 129, 50%));
+}
+
+.scroll {
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.pageTitle {
+  visibility: hidden;
+
+  @media (--mobile) {
+    visibility: visible;
+  }
+}
+
+.menuDrawer {
+  max-width: 803px;
+  margin-right: 52px;
+}
+
+.menuDrawerHeader {
+  top: 38px;
+  padding: 10px;
+  margin: 0;
+}
+
+.menuTopLinks {
+  height: 38px;
+  background-color: var(--color-background-accent-01, #2d2d2d);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 55;
+}

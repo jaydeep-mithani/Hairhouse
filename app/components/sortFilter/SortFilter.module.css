@@ -1,0 +1,174 @@
+.root {
+  border-top: 1px solid var(--color-border-line-primary);
+  padding: 32px 0 0;
+  display: grid;
+
+  @media (--desktop) {
+    grid-template-columns: 1fr 3fr;
+    gap: 135px;
+    padding: 40px 0 0;
+  }
+}
+
+.toolbarButtonWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  position: sticky;
+  top: 48px;
+  padding-bottom: 12px;
+  z-index: 10;
+  background: var(--color-background-primary);
+
+  @media (--desktop) {
+    display: none;
+  }
+}
+
+.productsCount {
+  --typography-body-font-weight: 350;
+
+  color: var(--color-text-secondary);
+}
+
+.select {
+  --select-border-radius: 0;
+  --select-border-color-hover: var(--color-border-line-primary);
+
+  max-width: 163.5px;
+
+  @media (--desktop) {
+    --select-md-padding: 17px;
+
+    max-width: 224px;
+  }
+}
+
+.selectArrow {
+  svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+}
+
+.selectTitle {
+  --typography-body-line-height: 14px;
+  --typography-body-font-weight: 500;
+
+  @media (--mobile), (--tablet) {
+    display: none;
+  }
+}
+
+.selectPrefix {
+  margin-right: 4px !important;
+}
+
+.refineButton {
+  --btn-size-md-padding: 0 51px;
+
+  @media (--desktop) {
+    display: none !important;
+  }
+}
+
+.accordion {
+  --accordion-title-color-bg-hover: transparent;
+
+  padding: 0 16px;
+  overflow: auto !important;
+
+  @media (--desktop) {
+    padding: 23px 0 13px;
+    max-width: 313px;
+  }
+}
+
+.accordionExpanded {
+  overflow: auto !important;
+  max-height: 206px;
+}
+
+.accordionItem {
+  --typography-heading-font-size: var(--typography-body-font-size);
+  --typography-heading-line-height: var(--typography-body-line-height);
+  --accordion-content-padding: 0 0 3px 0;
+  --accordion-title-padding-vertical: 17px 7px;
+  --accordion-title-padding-horizontal: 17px 8px;
+
+  @media (--desktop) {
+    --accordion-title-padding-vertical: 17px 0;
+  }
+}
+
+.checkboxLabel {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-secondary);
+}
+
+.checkbox {
+  --checkbox-content-margin-boxed: 0 0 0 8px;
+  --checkbox-content-padding-boxed: 0;
+  --checkbox-color: var(--color-text-action-primary);
+  --checkbox-border-radius: 0;
+  --checkbox-width-md: 16px;
+  --checkbox-height-md: 16px;
+
+  width: 100% !important;
+  padding: 5px 28px 11px 7px;
+}
+
+.box {
+  border-color: var(--color-interactive-action-field);
+}
+
+.checkboxContent {
+  width: 100%;
+}
+
+.clearAllButton {
+  --btn-link-text-decoration: underline;
+  --btn-font-weight: 350;
+  --btn-line-height: var(--typography-body-regular-line-height);
+  --btn-text-transform: none;
+
+  text-underline-offset: 6px;
+}
+
+.mobileDrawerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-height: calc(100vh - 56px);
+}
+
+.drawerFooterButtonsWrapper {
+  --btn-link-color-text-primary: var(--color-text-action-link-hover);
+  --btn-link-text-decoration: underline;
+  --btn-size-md-padding: 0 40px;
+  --btn-size-md-height: 45px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  gap: 16px;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 10%);
+}
+
+.drawerFooterButton {
+  --btn-font-size: var(--typography-body-regular-font-size);
+  --btn-line-height: var(--typography-body-regular-line-height);
+  --btn-text-transform: none;
+  --btn-icon-disabled-opacity: 0.5;
+
+  width: 141px;
+}

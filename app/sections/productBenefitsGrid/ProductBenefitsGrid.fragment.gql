@@ -1,0 +1,15 @@
+fragment ProductBenefitsGrid on ProductBenefitsGrid {
+  id
+  items {
+    ... on ProductBenefitsItem {
+      id
+      image {
+        altText
+        url
+        width
+        height
+        id
+      }
+    }
+  }
+}

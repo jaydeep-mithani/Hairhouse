@@ -1,0 +1,1 @@
+export { AccountLoyaltyBlock } from './AccountLoyaltyBlock'

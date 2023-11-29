@@ -1,0 +1,4 @@
+fragment SectionCollectionSubcategoryLink on SectionCollectionSubcategoryLink {
+  id
+  adminTitle
+}

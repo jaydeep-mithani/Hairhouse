@@ -1,0 +1,636 @@
+.root {
+  background-color: var(--color-background-primary, #fff);
+}
+
+.bookingTitle {
+  --typography-xLarge-font-weight: 500;
+}
+
+.bookingSubTitle {
+  font-weight: 350;
+  color: var(--color-text-secondary, #4a4f53);
+
+  @media (--mobile) {
+    --typography-bodyLarge-font-size: 14px;
+    --typography-bodyLarge-line-height: 16.8px;
+  }
+}
+
+.bodySubTitle {
+  color: var(--color-text-secondary, #4a4f53);
+
+  --typography-body-font-weight: 350;
+}
+
+.modalHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 7px;
+  position: relative;
+
+  @media (--desktop) {
+    padding: 32px 47px;
+  }
+}
+
+.modalHeaderButton {
+  --btn-font-weight: 350;
+  --btn-link-text-decoration-hover: none;
+  --btn-icon-spacing: 0;
+
+  & svg {
+    --btn-icon-size: 31px;
+  }
+
+  @media (--mobile) {
+    width: auto;
+
+    & > span {
+      display: none;
+    }
+
+    & svg {
+      --btn-icon-size: 28px;
+    }
+  }
+}
+
+.backBtnBox {
+  position: absolute;
+  display: flex;
+  left: 7px;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  @media (--desktop) {
+    left: 47px;
+  }
+}
+
+.chanelBtnBox {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  @media (--desktop) {
+    right: 47px;
+  }
+}
+
+.modalHeaderCancelButton {
+  flex-direction: row-reverse;
+}
+
+.error {
+  color: var(--color-state-critical, #d82c0d);
+  padding-left: 14px;
+}
+
+/* SalonBookingWelcome */
+
+.salonWelcomeWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+  margin: 32px 0;
+  text-align: center;
+
+  @media (--desktop) {
+    max-width: 656px;
+    margin: 80px auto;
+    padding: 0 48px;
+  }
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+
+  @media (--desktop), (--tablet) {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+.salonWelcomeImage {
+  @media (--mobile) {
+    aspect-ratio: 4/2.6;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.bookingTypeCard {
+  border: 1px solid var(--color-border-line-seperate-primary);
+  padding: 16px;
+  text-align: left;
+}
+
+.bookingTypeCardSelected,
+.hairLengthCardActive,
+.bookingTypeCard:hover,
+.hairLengthCard:hover,
+.serviceCard:hover,
+.serviceCardActive {
+  border: 1px solid var(--color-background-accent-01);
+
+  --color-border-line-seperate-primary: var(--color-background-accent-01);
+}
+
+.salonWelcomeImageHeading {
+  padding: 8px 0 0;
+}
+
+/* SalonBookingPromoBanner */
+
+.promoBanner {
+  background-color: var(--promoBannerBackgroundColor);
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.buttonLink {
+  --btn-link-text-decoration: underline;
+  --btn-font-weight: 350;
+
+  text-underline-offset: 6px;
+}
+
+/* SalonBookingCreateAccount */
+
+.createAccountWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 32px 16px;
+
+  @media (--desktop) {
+    max-width: 656px;
+    margin: auto;
+    text-align: center;
+    padding: 80px 0 0;
+  }
+}
+
+.loginWrapper {
+  display: flex;
+  gap: 15px;
+  align-items: baseline;
+
+  @media (--desktop) {
+    gap: 8px;
+  }
+}
+
+.formWrapper {
+  display: flex;
+  width: 100%;
+  padding: 33px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+
+  @media (--desktop) {
+    padding: 40px 0;
+  }
+}
+
+.formTitle {
+  @media (--desktop) {
+    padding-left: 4px;
+  }
+}
+
+.input {
+  --input-size-md-height: 45px;
+
+  width: 100%;
+}
+
+.nameFieldsWrapper {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  flex-direction: column;
+
+  @media (--desktop) {
+    flex-direction: row;
+  }
+}
+
+.createAccountButton {
+  width: 100%;
+
+  @media (--desktop) {
+    width: 350px;
+  }
+}
+
+/* SalonBookingHairLength */
+
+.salonHeirLengthWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+  margin: 20px 0;
+  text-align: center;
+
+  @media (--desktop) {
+    margin: 80px auto;
+  }
+}
+
+.salonHairLengthImageHeading {
+  padding: 16px 0 0;
+
+  --typography-subheading-font-weight-regular: 500;
+
+  @media (--mobile) {
+    --typography-subheading-font-size: var(--typography-email-subheading-heavy-font-size);
+    --typography-subheading-line-height: var(--typography-email-subheading-heavy-line-height);
+
+    padding: 0;
+  }
+}
+
+.salonHairlengthSubtitle {
+  text-align: left;
+  padding-top: 6px;
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.hairlengthImageWrapper {
+  gap: 6px;
+  margin-bottom: 32px;
+
+  @media (--desktop) {
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+}
+
+.hairLengthCard {
+  border: 1px solid var(--color-border-line-seperate-primary);
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  max-width: 211px;
+
+  @media (--mobile) {
+    gap: 16px;
+    flex-direction: row;
+    padding: 16px;
+    max-width: 100%;
+  }
+}
+
+.hairlengthCaption {
+  font-weight: 350 !important;
+  color: var(--color-text-secondary);
+  padding-top: 12px;
+}
+
+.hairLengthImage {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.hairLengthCardTextWrapper {
+  width: 100%;
+
+  @media (--mobile) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    margin: auto;
+  }
+}
+
+/* SalonBookingProgressBar */
+
+.progressBarWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 656px;
+  margin-bottom: 32px;
+
+  @media (--desktop) {
+    padding: 10px 0;
+    margin-bottom: 40px;
+  }
+}
+
+.progressBarTextWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.progressBarContainer {
+  --progressBarHeight: 2px;
+
+  width: 100%;
+  height: var(--progressBarHeight);
+  background-color: var(--color-border-line-primary);
+}
+
+.progressBarFiller {
+  height: var(--progressBarHeight);
+  background-color: var(--color-text-primary);
+  transition: width 1s ease-in-out;
+}
+
+.progressBarText {
+  padding: 11px 0 17px;
+
+  --typography-subheading-font-weight-regular: 500;
+
+  @media (--desktop) {
+    padding: 11px 0;
+  }
+}
+
+.progressBarButton {
+  --btn-link-text-decoration: underline;
+  --btn-font-weight: 350;
+  --btn-line-height: 16.8px;
+
+  text-underline-offset: 4px;
+
+  @media (--desktop) {
+    --btn-font-size: 16px;
+    --btn-line-height: 19.2px;
+  }
+}
+
+/* SalonBookingSelectService */
+
+.serviceCard {
+  border: 1px solid var(--color-border-line-primary, #e2e2e2);
+}
+
+.bookingCardSubTitle {
+  --typography-bodyLarge-line-height: 19.6px;
+}
+
+.bookingCardBtn {
+  --btn-size-md-height: 32px;
+  --btn-size-md-padding: 0;
+  --btn-solid-color-bg-accent-hover: none;
+}
+
+.bookingCardBtn svg {
+  --btn-icon-size: 32px;
+}
+
+/* SalonBookingSelectStore */
+
+.subHeading {
+  --typography-subheading-font-weight-regular: 500;
+  --typography-subheading-font-size: 14px;
+  --typography-subheading-line-height: 16.8px;
+}
+
+.changeStoreLink {
+  --btn-size-md-padding: 0;
+  --btn-size-md-height: auto;
+  --btn-solid-color-bg-accent-hover: none;
+}
+
+.linkText {
+  color: var(--color-text-secondary, #4a4f53);
+
+  --typography-body-font-weight: 350;
+
+  &:hover {
+    --typography-body-text-decoration: underline;
+
+    text-underline-offset: 3px;
+  }
+}
+
+.notAvaliableBlock {
+  background-color: var(--color-brand-secondary-light-brown, #f9f5f0);
+}
+
+.phoneNumber {
+  --typography-subheading-font-weight-regular: 500;
+  --typography-subheading-font-size: 16px;
+  --typography-subheading-line-height: 19.2px;
+
+  @media (--tablet-m) {
+    --typography-subheading-font-size: 20px;
+    --typography-subheading-line-height: 24px;
+  }
+}
+
+.bodyThin {
+  --typography-body-font-weight: 350;
+}
+
+.borderTop {
+  border-top: 1px solid var(--color-border-line-seperate-primary, #eceff1);
+}
+
+.borderBottom {
+  border-bottom: 1px solid var(--color-border-line-seperate-primary, #eceff1);
+}
+
+.storeTitle {
+  --typography-subheading-font-weight-regular: 500;
+  --typography-subheading-font-size: 20px;
+  --typography-subheading-line-height: 24px;
+}
+
+.grey {
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.selectBtn {
+  --btn-size-md-height: 30px;
+}
+
+.searchResults {
+  border: 1px solid var(--color-border-line-primary, #e2e2e2);
+  border-top: none;
+}
+
+.searchResults button {
+  border-bottom: 1px solid var(--color-border-line-primary, #e2e2e2);
+}
+
+.searchResult:hover {
+  background-color: var(--color-brand-secondary-light-brown, #f9f5f0);
+}
+
+.mapWrapper {
+  width: calc(100% + 16px * 2);
+  margin-left: -16px;
+  margin-right: -16px;
+
+  @media (--tablet-m) {
+    width: calc(100% + 48px * 2);
+    margin-left: -48px;
+    margin-right: -48px;
+  }
+}
+
+/* SalonBookingSelectStylist */
+
+.maxCount {
+  color: var(--color-text-accent-01, #bdbfc3);
+}
+
+.textarea span textarea:focus {
+  outline: none;
+
+  --tw-ring-shadow: none;
+}
+
+/* SalonBookingSelectTime */
+
+.columnTitle {
+  --typography-pageheading-font-size: 20px;
+  --typography-pageheading-line-height: 24px;
+}
+
+:global(.react-calendar__navigation) {
+  display: flex;
+  padding: 8px 10px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--accordion-border-color, #e2e2e2);
+}
+
+:global(.react-calendar__navigation__label__labelText) {
+  font-size: var(--typography-body-regular-font-size, 14px);
+}
+
+:global(.react-calendar__month-view__weekdays__weekday) {
+  :global(abbr:where([title])) {
+    text-decoration: none;
+    margin-bottom: 12px;
+    font-weight: var(--typography-heading-font-weight, 500);
+    text-transform: capitalize;
+  }
+}
+
+:global(.react-calendar__month-view__days) {
+  button:disabled {
+    opacity: 0.3;
+  }
+
+  :global(.react-calendar__tile--active) {
+    background-color: var(--color-interactive-action-focus, #dfb7b7);
+  }
+
+  :global(.react-calendar__month-view__days__day) {
+    width: 40px;
+    height: 36px;
+    font-size: var(--typography-body-regular-font-size, 14px);
+  }
+}
+
+.timeTitleBlock {
+  border-bottom: 1px solid var(--color-border-line-primary, #e2e2e2);
+}
+
+.btnTimesOfDay {
+  width: 100%;
+  padding: 10px 0;
+
+  & p {
+    color: var(--color-text-secondary, #4a4f53);
+  }
+}
+
+.btnTimesOfDayClicked {
+  border-bottom: 3px solid var(--color-interactive-action-primary, #000);
+
+  & p {
+    color: var(--color-interactive-action-primary, #000);
+  }
+}
+
+.timeBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 12px;
+}
+
+.timeBlockBtn {
+  --btn-ghost-color-bg-secondary: var(--color-background-secondary, #f7f7f7);
+  --btn-ghost-color-border-secondary-hover: var(--color-background-secondary, #f7f7f7);
+}
+
+.timeBlockBtnSelected {
+  --btn-ghost-color-bg-secondary: var(--color-brand-primary-salon, #dfb7b7);
+  --btn-ghost-color-border-secondary-hover: var(--color-brand-primary-salon, #dfb7b7);
+}
+
+.inputCalendar input {
+  padding-top: 2px;
+}
+
+/* SalonBookingReviewBooking */
+
+.bodyTitle {
+  --typography-body-font-weight: 350;
+}
+
+.finishBlock {
+  background-color: var(--color-brand-secondary-light-brown, #f9f5f0);
+}
+
+.editBookingBtn {
+  --btn-size-md-height: 40px;
+  --btn-solid-color-bg-secondary-hover: var(--color-brand-secondary-light-brown, #f9f5f0);
+}
+
+.editBtn {
+  --btn-link-text-decoration-hover: none;
+}
+
+.editBtnText {
+  text-underline-offset: 2px;
+
+  --typography-caption-text-decoration: underline;
+}
+
+.checkbox {
+  --checkbox-content-max-width-boxed: 100%;
+  --checkbox-bg-color-checked: var(--color-background-secondary, #f7f7f7);
+}
+
+.finishBlockTitle {
+  --typography-subheading-font-size: 18px;
+  --typography-subheading-line-height: 21.6px;
+
+  @media (--tablet-m) {
+    --typography-subheading-font-size: 20px;
+    --typography-subheading-line-height: 24px;
+  }
+}

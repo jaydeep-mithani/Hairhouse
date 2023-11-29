@@ -1,0 +1,7 @@
+fragment SectionSeoText on SectionSeoText {
+  id
+  content {
+    raw
+  }
+  textLayout
+}

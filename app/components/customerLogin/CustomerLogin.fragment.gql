@@ -1,0 +1,13 @@
+fragment SectionAccountSignupCta on SectionAccountSignupCta {
+  headline {
+    html
+  }
+  signupButtons {
+    buttonText
+    ctaType
+    openInNewWindow
+    url
+  }
+  benefits
+  id
+}

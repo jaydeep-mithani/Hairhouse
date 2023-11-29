@@ -1,0 +1,10 @@
+fragment ArticlePageImageSection on SectionFullWidthImage {
+  id
+  imageLayout
+  images {
+    altText
+    height
+    url
+    width
+  }
+}

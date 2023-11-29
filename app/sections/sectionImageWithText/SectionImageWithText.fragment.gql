@@ -1,0 +1,38 @@
+#import "../graphql/sections/shared-fragments/button/ButtonModule.fragment.gql"
+
+fragment SectionImageWithText on SectionImageWithText {
+  title
+  imageWithText {
+    backgroundColour
+    buttons {
+      buttonText
+      ctaType
+      id
+      url
+      openInNewWindow
+    }
+    heading
+    id
+    imagePosition
+    imageWidth
+    text {
+      html
+    }
+    image {
+      altText
+      fileName
+      url
+      height
+      size
+      width
+    }
+    contentAlignment
+    button {
+      buttonText
+      ctaType
+      id
+      url
+      openInNewWindow
+    }
+  }
+}

@@ -1,0 +1,26 @@
+fragment SectionPiercingGrid on SectionPiercingGrid {
+  id
+  piercingGridTabs {
+    ... on PiercingGridTab {
+      ...PiercingGridTab
+    }
+  }
+}
+
+fragment PiercingGridTab on PiercingGridTab {
+  name
+  piercingGridItems {
+    ... on PiercingGridItem {
+      ...PiercingGridItem
+    }
+  }
+}
+
+fragment PiercingGridItem on PiercingGridItem {
+  name
+  description
+  image {
+    altText
+    url
+  }
+}

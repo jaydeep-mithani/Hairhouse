@@ -1,0 +1,8 @@
+fragment EditorialText on EditorialText {
+  id
+  adminTitle
+  editorialContent: copy {
+    html
+  }
+  textAlignment
+}

@@ -1,0 +1,65 @@
+fragment FeatureProductCarouselTabbed on FeatureProductCarouselTabbed {
+  adminTitle
+  ... on FeatureProductCarouselTabbed {
+    tabbedContent: content {
+      __typename
+      ... on ProductCarouselCollection {
+        id
+        tabName
+        shopifyCollectionId
+      }
+      ... on ProductCarouselCurated {
+        id
+        tabName
+        products {
+          id
+          shopifyId
+          adminTitle
+          publishedAt
+          product {
+            title
+            vendor
+            handle
+            variants {
+              __typename
+              nodes {
+                id
+                image {
+                  url
+                  altText
+                  width
+                  height
+                }
+                price {
+                  amount
+                  currencyCode
+                }
+                compareAtPrice {
+                  amount
+                  currencyCode
+                }
+                product {
+                  handle
+                  title
+                }
+              }
+            }
+          }
+        }
+      }
+      ... on ProductCarouselUnbxd {
+        id
+        tabName
+        stage
+        unbxdSectionId
+      }
+    }
+  }
+
+  id
+  header: heading {
+    html
+  }
+  stage
+  navigationPostion
+}

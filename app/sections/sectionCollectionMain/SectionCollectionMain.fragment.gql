@@ -1,0 +1,20 @@
+fragment SectionCollectionMain on SectionCollectionMain {
+  id
+  __typename
+  modulePromoBanner {
+    adminTitle
+    desktopImage {
+      altText
+      height
+      url
+      width
+    }
+    mobileImage {
+      altText
+      height
+      url
+      width
+    }
+    urlLink
+  }
+}

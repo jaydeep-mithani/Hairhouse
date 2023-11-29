@@ -1,0 +1,1 @@
+export { RewardPoints } from './RewardPoints'

@@ -1,0 +1,34 @@
+fragment SectionTestimonial on SectionTestimonial {
+  id
+  heading
+  bgColor: backgroundColor {
+    hex
+  }
+  testimonials {
+    ... on BlogTile {
+      ...Testimonials
+    }
+  }
+}
+
+fragment Testimonials on BlogTile {
+  id
+  name
+  description {
+    text
+  }
+  expertName
+  topLeftBoxText
+  postedDate
+  image {
+    altText
+    height
+    width
+    url
+  }
+  button {
+    id
+    url
+    buttonText
+  }
+}

@@ -1,0 +1,34 @@
+.text {
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.link {
+  --typography-bodyLarge-text-decoration: underline;
+  --typography-bodyLarge-text-decoration-hover: none;
+
+  text-decoration-color: var(--color-text-secondary, #4a4f53);
+}
+
+.line {
+  background-color: var(--color-border-line-primary, #e2e2e2);
+}
+
+.checkbox {
+  --checkbox-width-md: 24px;
+  --checkbox-height-md: 24px;
+  --checkbox-content-margin-boxed: 0 0 0 12px;
+  --checkbox-content-padding-boxed: 0px;
+  --checkbox-border-radius: 0px;
+  --checkbox-bg-color-checked: var(--color-interactive-action-primary, #000);
+  --checkbox-color: var(--color-text-action-primary, #fff);
+  --typography-caption-font-weight: 350;
+  --checkbox-content-max-width-boxed: 630px;
+}
+
+.checkbox span {
+  --checkbox-color: var(--color-interactive-action-primary, #000);
+}
+
+.chekboxes {
+  --checkbox-horizontal-padding: 0px;
+}

@@ -1,0 +1,96 @@
+#import "../app/sections/header/Header.fragment.gql"
+#import "../app/sections/footer/Footer.fragment.gql"
+#import "../app/sections/articlePageTitleInfoSection/ArticlePageTitleInfoSection.fragment.gql"
+#import "../app/sections/blogCarousel/BlogCarousel.fragment.gql"
+#import "../app/sections/articlePageAccordionSection/ArticlePageAccordionSection.fragment.gql"
+#import "../app/sections/articlePageTextSection/ArticlePageTextSection.fragment.gql"
+#import "../app/sections/articlePageImageSection/ArticlePageImageSection.fragment.gql"
+#import "../app/sections/articlePageVideoSection/ArticlePageVideoSection.fragment.gql"
+#import "../app/sections/articlePageLinksSection/ArticlePageLinksSection.fragment.gql"
+#import "../app/sections/articleProductCarousel/ArticleProductCarousel.fragment.gql"
+
+query articlePage($url: String, $relatedPostsWhere: ArticlePageWhereInput) {
+  articlePage(where: { url: $url }) {
+    id
+    ...ArticlePageTitleInfoElements
+    additionalSettings {
+      showAuthorInfoAfter
+    }
+    ...ArticlePageLinks
+    sources {
+      showAfterSection
+      sources {
+        adminTitle
+        text
+        id
+      }
+      subtitle {
+        html
+      }
+      title
+      subtitleBackground {
+        hex
+      }
+    }
+    articleContent(first: 20) {
+      ... on SectionBlogCarousel {
+        ...SectionBlogCarousel
+      }
+      ... on SectionFullWidthImage {
+        ...ArticlePageImageSection
+      }
+      ... on SectionFullWidthVideo {
+        ...ArticlePageVideoSection
+      }
+      ... on SectionRelatedProduct {
+        ...ArticleProductCarousel
+      }
+      ... on SectionTextBlockWithCTAs {
+        ...ArticlePageTextSection
+      }
+      ... on SectionsAccordion {
+        ...ArticlePageAccordionSection
+      }
+    }
+    pageMeta {
+      metaTitle
+      metaDescription
+    }
+  }
+  relatedPosts: articlePages(where: $relatedPostsWhere, first: 20) {
+      author {
+        authorName
+        authorImage {
+          altText
+          height
+          url
+          width
+        }
+        authorPosition
+      }
+      blog {
+        title
+        url
+      }
+      title
+      url
+      publishedAt
+      publishDate
+      shortDescription
+      thumbnail {
+        altText
+        height
+        width
+        url
+      }
+      stage
+    }
+  websiteConfigs(first: 1) {
+    footer {
+      ...Footer
+    }
+    header {
+      ...Header
+    }
+  }
+}

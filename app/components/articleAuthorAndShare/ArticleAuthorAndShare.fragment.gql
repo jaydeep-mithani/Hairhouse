@@ -1,0 +1,12 @@
+fragment ArticleAuthor on ArticlePage {
+  author {
+    authorImage {
+    altText
+    height
+    width
+    url
+  }
+  authorName
+  authorPosition
+  }
+}

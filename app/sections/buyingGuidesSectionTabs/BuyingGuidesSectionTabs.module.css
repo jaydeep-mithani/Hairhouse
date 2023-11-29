@@ -1,0 +1,39 @@
+.root {
+  background-color: #f9f5f0;
+  display: flex;
+  justify-content: center;
+  margin: 0 105px;
+
+  & .tabsWrapper {
+    display: flex;
+    gap: 40px;
+  }
+
+  & .tabLink {
+    padding: 25px 0;
+    border-bottom: 3px solid #f9f5f0;
+    cursor: pointer;
+  }
+
+  & .activeTab {
+    border-bottom: 3px solid #000;
+  }
+
+  @media (--mobile), (--tablet) {
+    margin: 0;
+
+    ::-webkit-scrollbar {
+      height: 0;
+      background: transparent;
+    }
+
+    & .tabLink {
+      white-space: nowrap;
+    }
+
+    & .tabsWrapper {
+      overflow-x: auto;
+      padding: 0 16px;
+    }
+  }
+}

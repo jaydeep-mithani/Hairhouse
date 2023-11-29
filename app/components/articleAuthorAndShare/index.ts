@@ -1,0 +1,1 @@
+export { ArticleAuthorAndShare } from './ArticleAuthorAndShare'

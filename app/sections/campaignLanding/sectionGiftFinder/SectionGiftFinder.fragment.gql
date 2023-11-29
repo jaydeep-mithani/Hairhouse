@@ -1,0 +1,35 @@
+fragment SectionGiftFinder on SectionGiftFinder {
+  id
+  heading
+  backgroundColor {
+    hex
+  }
+  image {
+    altText
+    width
+    height
+    url
+  }
+  preezieGuideKey
+  questionTitle
+  questions {
+    ... on GiftFinderQuestion {
+      ...GiftFinderQuestion
+    }
+  }
+}
+
+fragment GiftFinderQuestion on GiftFinderQuestion {
+  id
+  question
+  options {
+    id
+    icon {
+      altText
+      height
+      width
+      url
+    }
+    adminTitle
+  }
+}
