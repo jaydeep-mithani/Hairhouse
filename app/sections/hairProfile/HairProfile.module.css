@@ -1,0 +1,64 @@
+.text {
+  color: var(--color-text-secondary, #4a4f53);
+
+  --typography-bodyLarge-font-size: 14px;
+  --typography-bodyLarge-line-height: 19.6px;
+
+  @media (--tablet-m) {
+    --typography-bodyLarge-font-size: 16px;
+    --typography-bodyLarge-line-height: 22.4px;
+  }
+}
+
+.link {
+  --typography-bodyLarge-text-decoration: underline;
+  --typography-bodyLarge-text-decoration-hover: none;
+
+  text-decoration-color: var(--color-text-secondary, #4a4f53);
+}
+
+.line {
+  background-color: var(--color-border-line-primary, #e2e2e2);
+}
+
+.subTitleSm {
+  --typography-caption-font-weight: 350;
+
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.checkbox {
+  --checkbox-width-md: 24px;
+  --checkbox-height-md: 24px;
+  --checkbox-content-margin-boxed: 0 0 0 12px;
+  --checkbox-content-padding-boxed: 0px;
+  --checkbox-border-radius: 0px;
+  --checkbox-bg-color-checked: var(--color-interactive-action-primary, #000);
+  --checkbox-color: var(--color-text-action-primary, #fff);
+}
+
+.checkbox span {
+  --checkbox-color: var(--color-interactive-action-primary, #000);
+}
+
+.radio {
+  --radio-size-md: 24px;
+}
+
+.radio span {
+  border-radius: 0%;
+}
+
+.radio span::after {
+  color: var(--color-background-primary, #fff);
+}
+
+.textArea {
+  --textarea-tip-font-size: 0px;
+}
+
+.textareaTag {
+  color: var(--color-text-accent-01, #bdbfc3);
+
+  --typography-caption-font-weight: 350;
+}

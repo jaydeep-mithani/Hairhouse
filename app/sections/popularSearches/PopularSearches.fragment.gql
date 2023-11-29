@@ -1,0 +1,6 @@
+fragment SectionSearchTermList on SectionSearchTermList {
+  id
+  adminTitle
+  headline
+  searchTerms
+}

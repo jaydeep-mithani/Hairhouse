@@ -1,0 +1,1 @@
+export { ParticipatingSalonAccordion } from './ParticipatingSalonAccordion'

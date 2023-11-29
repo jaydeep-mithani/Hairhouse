@@ -1,0 +1,46 @@
+.root {
+  padding: 60px 16px;
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (--desktop) {
+    padding: 75px 105px 48px;
+    justify-content: var(--textAlignment);
+  }
+
+  & u {
+    text-decoration: none;
+    box-shadow: inset 0 -8px 0 0 var(--highlightColour);
+
+    @media (--desktop) {
+      box-shadow: inset 0 -10px 0 0 var(--highlightColour);
+    }
+  }
+}
+
+.descriptionText {
+  text-align: var(--textAlignment);
+  position: relative;
+
+  @media (--desktop) {
+    max-width: 762px;
+  }
+
+  u {
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background-color: #dfb7b7;
+      z-index: -1;
+    }
+  }
+}

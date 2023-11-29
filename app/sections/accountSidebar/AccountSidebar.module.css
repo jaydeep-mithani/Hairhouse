@@ -1,0 +1,56 @@
+.sidebarMenu {
+  margin-bottom: 0;
+  overflow: hidden;
+  height: 47px;
+  border: 1px solid var(--color-interactive-action-primary, #000);
+
+  @media (--desktop-s) {
+    margin-bottom: 20px;
+    height: auto;
+    border: none;
+  }
+}
+
+.menuSection {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 20px 1fr;
+  padding: 13px 0 13px 16px;
+  border-bottom: 1px solid var(--color-border-line-primary, #e2e2e2);
+  gap: 0;
+
+  --typography-body-font-size: 16px;
+  --typography-body-bold-font-size: 16px;
+
+  @media (--desktop-s) {
+    padding: 17px 0 19px 8px;
+  }
+}
+
+.menuBtnBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 4px;
+  padding-right: 12px;
+
+  @media (--desktop-s) {
+    padding: 0;
+  }
+}
+
+.subMenu {
+  display: grid;
+  gap: 20px;
+}
+
+.subMenuLink {
+  color: var(--color-text-secondary, #4a4f53);
+
+  --typography-body-font-weight: 350;
+}
+
+.subMenuBtnLink {
+  --btn-link-text-decoration-hover: none;
+}

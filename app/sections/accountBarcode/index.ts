@@ -1,0 +1,1 @@
+export { AccountBarcode } from './AccountBarcode'

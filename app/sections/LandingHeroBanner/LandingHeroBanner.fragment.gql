@@ -1,0 +1,46 @@
+fragment SectionHeroBannerWithLink on SectionHeroBannerWithLink {
+  id
+  title
+  bannerDesktopImage: desktopImage {
+    height
+    width
+    url
+    altText
+  }
+  mobileImage {
+    height
+    width
+    url
+    altText
+  }
+  tabletImage {
+    height
+    width
+    url
+    altText
+  }
+  logoDesktopImage {
+    height
+    width
+    url
+    altText
+  }
+  logoMobileImage {
+    height
+    width
+    url
+    altText
+  }
+  logoTabletImage {
+    height
+    width
+    url
+    altText
+  }
+  menuBackground
+  links {
+    buttonText
+    url
+    id
+  }
+}

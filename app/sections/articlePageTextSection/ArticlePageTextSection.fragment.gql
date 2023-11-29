@@ -1,0 +1,18 @@
+fragment ArticlePageTextSection on SectionTextBlockWithCTAs {
+  id
+  heading
+  backgroundColour {
+    hex
+  }
+  textAlignment
+  textContent {
+    html
+  }
+  buttonCta {
+    buttonText
+    ctaType
+    id
+    url
+    openInNewWindow
+  }
+}

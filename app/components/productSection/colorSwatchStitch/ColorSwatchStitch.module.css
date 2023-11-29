@@ -1,0 +1,15 @@
+.colorSwatch {
+  min-width: 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.selectedColorSwatch {
+  box-shadow: 0 0 0 4px white, 0 0 0 6px var(--color-interactive-action-primary);
+}
+
+.text {
+  --typography-body-font-weight: 500;
+}

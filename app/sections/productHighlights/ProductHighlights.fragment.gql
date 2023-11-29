@@ -1,0 +1,42 @@
+fragment ProductHighlights on ProductHighlights {
+  adminTitle
+  totalReviews
+  ratings
+  accordions {
+    ... on ModuleAccordion {
+      title
+      description {
+        html
+      }
+    }
+  }
+  button {
+    buttonText
+    buttonTheme
+    buttonUrl
+    displayButton
+  }
+  getProductByHandles(first: 10) {
+    handle
+    productData {
+      node {
+        id
+        title
+        price {
+          amount
+        }
+        image {
+          url
+          altText
+          height
+          width
+        }
+        product {
+          id
+          title
+          description
+        }
+      }
+    }
+  }
+}

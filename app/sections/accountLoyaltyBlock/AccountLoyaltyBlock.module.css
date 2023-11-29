@@ -1,0 +1,103 @@
+.hidden {
+  visibility: hidden;
+}
+
+.loyaltyTop {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-bottom: 20px;
+
+  @media (--desktop-m) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.loyaltyTopTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subheadingTop {
+  --typography-subheading-font-size: 16px;
+  --typography-subheading-line-height: 19.2px;
+}
+
+.loyaltyStatus {
+  padding: 4px 5px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.loyaltyStatusGold {
+  background-color: var(--color-interactive-action-primary, #000);
+  color: var(--color-text-action-primary, #fff);
+}
+
+.loyaltyStatusPlatinum {
+  background-color: var(--color-brand-secondary-nougot, #dccdb7);
+  color: var(--color-text-primary, #000);
+}
+
+.loyaltyTopMessage {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.loyaltyBtn {
+  --btn-link-text-decoration: underline;
+
+  text-underline-offset: 3px;
+}
+
+.loyaltyBottom {
+  padding: 24px 24px 28px;
+}
+
+.statusBar {
+  display: flex;
+  margin-bottom: 25px;
+
+  @media (--tablet-m) {
+    margin-bottom: 20px;
+  }
+}
+
+.statusBarItem {
+  max-width: 275px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subheadingLarge {
+  --typography-subheading-font-size: 14px;
+  --typography-subheading-line-height: 16.8px;
+  --typography-subheading-font-weight-regular: 350;
+
+  @media (--tablet-m) {
+    --typography-subheading-font-size: 18px;
+    --typography-subheading-line-height: 21.6px;
+  }
+}
+
+.loyaltyLine {
+  height: 5px;
+  width: 100%;
+  position: relative;
+  background-color: var(--color-interactive-action-accent-01, #fff);
+}
+
+.loyaltyLineValue {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background-color: var(--color-interactive-action-focus, #dfb7b7);
+}

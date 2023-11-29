@@ -1,0 +1,71 @@
+.root {
+  --typography-heading-font-size: 18px;
+  --typography-large-font-weight: 700;
+
+  padding: 60px 120px;
+
+  & h1 {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  & .storeCardWrraper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 52px;
+    row-gap: 40px;
+    margin-bottom: 20px;
+
+    @media (--tablet) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @media (--mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    & .storeCard {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      & .logo {
+        max-width: 111px;
+      }
+
+      & p {
+        max-width: 266px;
+      }
+
+      & .linkWrraper {
+        display: flex;
+        gap: 40px;
+
+        & .linkButton {
+          border-bottom: 1px solid #000;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      & .buttonWrapper {
+        display: flex;
+        gap: 12px;
+
+        & .button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (--mobile) {
+    padding: 32px 16px;
+  }
+}
+
+.subheading {
+  color: var(--color-text-primary);
+}

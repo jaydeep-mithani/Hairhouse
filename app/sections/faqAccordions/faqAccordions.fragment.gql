@@ -1,0 +1,12 @@
+fragment AccordionElement on Accordion {
+  title
+  layout
+  accordions {
+    ... on ModuleAccordion {
+      title
+      description {
+        text
+      }
+    }
+  }
+}

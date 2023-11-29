@@ -1,0 +1,43 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 40px;
+
+  --typography-xLarge-font-size: 100px;
+  --typography-xLarge-line-height: 120%;
+  --typography-bodyLarge-weight-bold: 700;
+
+  & h1 {
+    margin-bottom: 8px;
+    letter-spacing: 0.1px;
+  }
+
+  & p {
+    margin-bottom: 32px;
+  }
+
+  & .page404 {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .button {
+    min-width: 241.33px;
+  }
+
+  @media (--mobile) {
+    margin: 40px 16px;
+
+    .button {
+      min-width: 100%;
+    }
+  }
+
+  @media (--mobile), (--tablet) {
+    --typography-xLarge-font-size: 60px;
+  }
+}

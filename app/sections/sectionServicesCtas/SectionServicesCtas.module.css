@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto;
+
+  @media (--tablet) {
+    margin: 32px 16px;
+    gap: 12px;
+  }
+
+  @media (--mobile) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    margin: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .serviceButton {
+    border: 1px solid var(--color-interactive-action-primary, #000);
+    border-radius: 0;
+    width: 100%;
+    transition: filter 0.3s;
+    white-space: nowrap;
+
+    &:hover {
+      filter: invert(1);
+    }
+
+    @media (--tablet), (--mobile) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    @media (--desktop) {
+      width: 232px;
+    }
+
+    span {
+      text-transform: capitalize;
+      font-weight: 500;
+    }
+  }
+}

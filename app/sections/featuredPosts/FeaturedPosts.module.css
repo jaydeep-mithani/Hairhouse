@@ -1,0 +1,122 @@
+.root {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: var(--color-brand-secondary-light-brown);
+
+  .featuredPostsSection {
+    position: relative;
+    padding: 64px 105px;
+
+    .featuredPostsTitle {
+      position: absolute;
+      left: -4.1%;
+      top: 45%;
+      font-family: var(--typography-display-x-large-desktop-font-family);
+      font-size: var(--typography-display-x-large-desktop-font-size);
+      line-height: 120%;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.1px;
+      color: var(--color-text-primary);
+      transform: translateY(-45%) rotate(-90deg);
+      z-index: 9;
+    }
+
+    .featuredPostsCarouselWrapper {
+      --swiperWrapperPaddingBottom: 0;
+
+      position: relative;
+      width: 100%;
+
+      img {
+        height: 403px;
+      }
+
+      & > div > div:last-child {
+        & > div:last-child {
+          left: 0;
+          right: 0;
+          width: calc(100% - 48px);
+        }
+      }
+    }
+
+    &:not(.showArrows) {
+      .featuredPostsTitle {
+        top: 35%;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .featuredPostsSection {
+      .featuredPostsTitle {
+        left: -4.1%;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .featuredPostsSection {
+      padding: 40px 32px;
+      .featuredPostsTitle {
+        left: -10.5%;
+        top: 36%;
+        font-size: var(--typography-display-x-large-mobile-font-size);
+      }
+
+      &:not(.showArrows) {
+        .featuredPostsTitle {
+          top: 32%;
+        }
+      }
+
+      .featuredPostsCarouselWrapper {
+        :global(.swiper-wrapper) {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .featuredPostsSection {
+      padding: 40px 16px 40px 40px;
+
+      .featuredPostsTitle {
+        left: -17.8%;
+      }
+
+      .featuredPostsCarouselWrapper {
+        :global(.customScrollbar) {
+          width: calc(100% - 20px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .featuredPostsSection {
+      .featuredPostsTitle {
+        top: 34%;
+        left: -12.5%;
+        font-size: 24px;
+      }
+
+      .featuredPostsCarouselWrapper {
+        img {
+          height: auto;
+          min-height: 230px;
+        }
+      }
+
+      &:not(.showArrows) {
+        .featuredPostsTitle {
+          top: 27%;
+        }
+      }
+    }
+  }
+}

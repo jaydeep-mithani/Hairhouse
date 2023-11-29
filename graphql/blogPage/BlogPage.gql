@@ -1,0 +1,136 @@
+#import "../app/sections/header/Header.fragment.gql"
+#import "../app/sections/footer/Footer.fragment.gql"
+
+query blogPage(
+  $url: String
+  $highlightedPostCondition: ArticlePageWhereInput
+  $fetchArticlesCondition: ArticlePageWhereInput
+  $orderBy: ArticlePageOrderByInput
+  $first: Int
+  $skip: Int
+) {
+  pageOptions: blogPage(where: { url: $url }) {
+    id
+    title
+    url
+    subtitle
+    hideBreadcrumb
+    featuredArticles {
+      author {
+        authorImage {
+          altText
+          height
+          url
+          width
+        }
+        authorName
+        authorPosition
+      }
+      blog {
+        title
+        url
+      }
+      thumbnail {
+        altText
+        height
+        url
+        width
+      }
+      shortDescription
+      title
+      url
+      publishedAt
+      publishDate
+    }
+    additionalSettings {
+      featuredPostsHeading
+      articleViewLinkText
+    }
+  }
+  highlightedPosts: articlePages(where: $highlightedPostCondition, first: 1, orderBy: publishedAt_DESC) {
+      author {
+        authorImage {
+          altText
+          height
+          url
+          width
+        }
+        authorName
+        authorPosition
+      }
+      blog {
+        title
+        url
+      }
+      thumbnail {
+        altText
+        height
+        url
+        width
+      }
+      shortDescription
+      title
+      url
+      publishedAt
+      publishDate
+    }
+  allBlogs: blogPages(orderBy: position_ASC) {
+    title
+    url
+    position
+  }
+  articlesWithPagination: articlePagesConnection(
+    where: $fetchArticlesCondition
+    orderBy: $orderBy
+    first: $first
+    skip: $skip
+  ) {
+    aggregate {
+      count
+    }
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      startCursor
+      pageSize
+    }
+    edges {
+      node {
+        author {
+          authorImage {
+            altText
+            height
+            url
+            width
+          }
+          authorName
+          authorPosition
+        }
+        blog {
+          title
+          url
+        }
+        thumbnail {
+          altText
+          height
+          url
+          width
+        }
+        shortDescription
+        title
+        url
+        publishedAt
+        publishDate
+      }
+    }
+  }
+  websiteConfigs(first: 1) {
+    footer {
+      ...Footer
+    }
+    header {
+      ...Header
+    }
+  }
+}

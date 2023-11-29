@@ -1,0 +1,1 @@
+export { HairProfile } from './HairProfile'

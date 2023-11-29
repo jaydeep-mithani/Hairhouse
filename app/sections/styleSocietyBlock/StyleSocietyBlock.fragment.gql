@@ -1,0 +1,41 @@
+fragment JoinCTApanel on JoinCTApanel {
+  id
+  desktopImage {
+    altText
+    url
+    mimeType
+  }
+  mobileImage {
+    altText
+    url
+    mimeType
+  }
+  textArea {
+    raw
+    html
+  }
+  textPositionLeft
+  textBlockLayout
+  contentColour {
+    ... on Color {
+      ...Color
+    }
+  }
+  ctAs {
+    ... on Cta {
+      ...Cta
+    }
+  }
+}
+
+fragment Color on Color {
+  hex
+}
+
+fragment Cta on Cta {
+  buttonText
+  ctaType
+  id
+  url
+  openInNewWindow
+}

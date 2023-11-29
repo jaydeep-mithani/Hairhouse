@@ -1,0 +1,39 @@
+fragment HeroBanner on HeroBanner {
+  id
+  heading
+  showBreadcrumbs
+  logo {
+    altText
+    url
+    height
+    width
+  }
+  subtext
+  desc: description {
+    html
+  }
+  layout
+  contentColour {
+    hex
+  }
+  showBreadcrumbs
+  textBlockLayout
+  mobileImage {
+    altText
+    height
+    url
+  }
+  ctaButtons {
+    id
+    buttonText
+    openInNewWindow
+    stage
+    url
+    ctaType
+  }
+  desktopImage {
+    altText
+    url
+    height
+  }
+}

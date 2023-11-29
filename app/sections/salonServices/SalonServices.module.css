@@ -1,0 +1,150 @@
+.root {
+  & h1 {
+    padding: 64px 48px 60px;
+    color: black;
+    line-height: 120%;
+    font-weight: 500;
+
+    @media (--mobile) {
+      padding: 32px 20px;
+    }
+  }
+
+  & .services_container {
+    padding: 60px 120px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    @media (--mobile) {
+      padding: 24px 16px 0;
+      gap: 24px;
+    }
+  }
+
+  & .service_box {
+    max-width: calc(50% - 32px);
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media (--tablet), (--mobile) {
+      max-width: 100%;
+      padding: 32px 20px;
+    }
+
+    & span {
+      color: #4a4f53;
+      padding-bottom: 4px;
+      line-height: 120%;
+      font-weight: 500;
+    }
+
+    & h3 {
+      color: black;
+      line-height: 120%;
+      font-weight: 85;
+
+      @media (--mobile) {
+        font-weight: 500;
+      }
+    }
+
+    & h3,
+    h5 {
+      padding-bottom: 12px;
+    }
+
+    & h5 {
+      --typography-xsmall-font-family-stack: 'Fakt';
+
+      color: black;
+      line-height: 120%;
+      font-weight: 500;
+    }
+
+    & button {
+      display: block;
+      max-width: fit-content;
+      padding: 15.5px 39.5px;
+      border-radius: 0;
+
+      & span {
+        color: #fff;
+        line-height: 14px;
+      }
+
+      &:hover span {
+        color: #000;
+      }
+
+      @media (--mobile) {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .serviceName {
+    font-family: var(--typography-display-x-large-desktop-font-family);
+    font-size: 24px !important;
+    line-height: 28.8px !important;
+    letter-spacing: 0.1px;
+  }
+
+  .description1 {
+    padding-bottom: 20px;
+
+    --typography-xsmall-font-family-stack: 'Fakt';
+
+    color: #4a4f53;
+    font-weight: 350;
+    line-height: 140%;
+    letter-spacing: 0.005em;
+  }
+
+  .description2 {
+    padding-bottom: 44px;
+
+    --typography-xsmall-font-family-stack: 'Fakt';
+
+    color: #4a4f53;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 350;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+  }
+
+  .disclaimer {
+    padding: 62px 31%;
+    padding-top: 0;
+    background-color: #f9f5f0;
+    text-align: center;
+
+    @media (--tablet), (--mobile) {
+      padding: 60px 16px 24px;
+    }
+
+    & p {
+      padding-bottom: 10px;
+      color: #4a4f53;
+      line-height: 140%;
+      font-weight: 350;
+    }
+
+    & h6 {
+      border-bottom: 1px solid #000;
+      max-width: fit-content;
+      margin: 0 auto;
+      color: black;
+      line-height: 140%;
+
+      --typography-caption-font-weight: 350;
+    }
+  }
+}

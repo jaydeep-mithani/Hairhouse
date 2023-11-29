@@ -1,0 +1,26 @@
+fragment SalonServices on SectionSalon {
+  bg: backgroundColor
+  id
+  salonNotes
+  name
+  salonServices {
+    button {
+      buttonText
+      ctaType
+      id
+      url
+    }
+    description
+    fromText
+    id
+    name
+    salonNote
+    subHeading
+  }
+  policyLink {
+    buttonText
+    ctaType
+    id
+    url
+  }
+}

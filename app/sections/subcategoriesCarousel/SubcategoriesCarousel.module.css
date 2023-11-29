@@ -1,0 +1,32 @@
+.root {
+  background-color: var(--color-background-primary);
+  padding: 16px 0;
+
+  @media (--desktop) {
+    padding: 40px 0;
+  }
+
+  :global(.swiper-slide) {
+    width: auto;
+  }
+}
+
+.customScrollbar {
+  --swiperWrapperPaddingBottom: 20px;
+  --swiper-scrollbar-size: 1px;
+  --swiper-scrollbar-drag-color: var(--color-interactive-action-primary, #000);
+  --swiper-scrollbar-drag-height: 1px;
+
+  @media (--desktop) {
+    --swiperWrapperPaddingBottom: 44px;
+  }
+}
+
+.button {
+  --btn-font-size: var(--typography-body-large-regular-font-size);
+  --btn-line-height: var(--typography-body-large-regular-line-height);
+  --btn-font-weight: 350;
+  --btn-size-md-padding: 0 24px;
+
+  width: auto;
+}

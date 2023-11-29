@@ -1,0 +1,11 @@
+fragment ArticlePageAccordionSection on SectionsAccordion {
+  id
+  accordionLayout
+  accordionSections {
+    title
+    content {
+      text
+    }
+  }
+  headline
+}

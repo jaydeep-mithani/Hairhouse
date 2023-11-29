@@ -1,0 +1,12 @@
+.priceOnSale {
+  --typography-heading-font-size: 18px;
+  --typography-medium-text-decoration: line-through;
+
+  font-family: var(--typography-heading-font-family-stack, 'Fakt');
+  font-style: var(--typography-heading-font-style, normal);
+  font-weight: var(--typography-heading-font-weight, 400);
+  font-size: var(--typography-heading-font-size, 18px);
+  line-height: var(--typography-heading-line-height, 22.4px);
+  color: var(--color-text-secondary, #4a4f53);
+  text-decoration: var(--typography-medium-text-decoration, line-through);
+}

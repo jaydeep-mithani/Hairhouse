@@ -1,0 +1,134 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 207px;
+  gap: 24px;
+
+  .titleAndSubtitle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .blogTitle {
+      font-size: var(--typography-display-x-large-desktop-font-size);
+      font-family: var(--typography-display-x-large-desktop-font-family);
+      font-weight: 85;
+      line-height: var(--typography-display-x-large-desktop-line-height);
+    }
+
+    .blogSubtitle {
+      font-family: var(--typography-body-large-regular-font-family);
+      font-size: var(--typography-body-large-regular-font-size);
+      font-weight: 350;
+      line-height: var(--typography-body-large-regular-line-height);
+      letter-spacing: var(--typography-body-large-regular-letter-spacing);
+      text-align: center;
+    }
+  }
+
+  .blogCategoriesAndSearch {
+    max-width: 1028px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .searchInputWrapper {
+      display: flex;
+      gap: 5px;
+      padding-top: 6px;
+
+      .searchInput {
+        gap: 0;
+        padding: 0;
+        min-height: 24px;
+        height: 24px;
+        display: none;
+
+        button {
+          min-width: 20px;
+          min-height: 20px;
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      &.searchInputOpened {
+        .searchInput {
+          display: flex;
+          min-width: max-content;
+        }
+      }
+    }
+
+    .blogItems {
+      display: flex;
+      gap: 40px;
+
+      .blogItem {
+        color: var(--color-text-secondary);
+        min-width: max-content;
+
+        .blogItemLink {
+          font-size: var(--typography-body-medium-font-size);
+          font-weight: var(--typography-body-medium-font-weight);
+          line-height: var(--typography-body-medium-line-height);
+          letter-spacing: var(--typography-body-medium-letter-spacing);
+          text-transform: uppercase;
+        }
+
+        &.activeItem {
+          --btn-link-text-decoration: underline;
+
+          color: var(--color-text-primary);
+          text-decoration-thickness: 1px;
+          text-underline-offset: 5px;
+
+          .blogItemLink {
+            font-weight: var(--typography-body-bold-font-weight);
+          }
+        }
+      }
+    }
+  }
+
+  @media (--tablet), (--mobile) {
+    padding: 0;
+
+    .blogCategoriesAndSearch {
+      gap: 24px;
+
+      .blogItems {
+        gap: 24px;
+      }
+    }
+  }
+
+  @media (--tablet) {
+    padding: 30px 32px;
+  }
+
+  @media (--mobile) {
+    padding: 30px 16px;
+    gap: 20px;
+
+    .titleAndSubtitle {
+      .blogTitle {
+        font-size: var(--typography-display-x-large-mobile-font-size);
+        line-height: var(--typography-display-x-large-mobile-line-height);
+      }
+    }
+
+    .blogCategoriesAndSearch {
+      justify-content: flex-start;
+    }
+  }
+}

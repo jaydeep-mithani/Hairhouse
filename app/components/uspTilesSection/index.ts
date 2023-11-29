@@ -1,0 +1,1 @@
+export { USPTilesSection } from './USPTilesSection'

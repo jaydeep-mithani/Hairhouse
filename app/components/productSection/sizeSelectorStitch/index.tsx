@@ -1,0 +1,1 @@
+export { SizeSelectorStitch } from './SizeSelectorStitch'

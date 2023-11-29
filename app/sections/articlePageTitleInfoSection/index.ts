@@ -1,0 +1,1 @@
+export { ArticlePageTitleInfoSection } from './ArticlePageTitleInfoSection'

@@ -1,0 +1,85 @@
+.storeDetailWrap {
+  margin: 100px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @media (--mobile) {
+    margin: 60px 0;
+  }
+
+  @media (--tablet), (--mobile) {
+    display: block;
+  }
+
+  :global(.gm-style-cc) {
+    display: none;
+  }
+}
+
+.mapWrap {
+  background: #ccc;
+  height: 610px;
+  width: 100%;
+
+  @media (--mobile) {
+    height: 382px;
+  }
+}
+
+.infoBlock {
+  background: var(--color-brand-secondary-light-brown, #f9f5f0);
+  padding: 64px;
+  display: grid;
+  gap: 24px;
+  max-width: 518px;
+  width: 100%;
+  margin-left: -206px;
+  position: relative;
+  z-index: 1;
+
+  @media (--tablet), (--mobile) {
+    margin: -36px auto 0;
+  }
+
+  @media (--mobile) {
+    max-width: 100%;
+    margin: -36px 16px 0;
+    padding: 32px 20px;
+    width: initial;
+  }
+
+  .title {
+    font-weight: var(--typography-pageheading-font-weight);
+  }
+}
+
+.infoItem {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 12px;
+  width: 100%;
+
+  .link {
+    margin-top: 4px;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    font-weight: var(--typography-subheading-regular-desktop-font-weight);
+    letter-spacing: var(--typography-body-regular-letter-spacing);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .text {
+    font-weight: 350;
+  }
+}
+
+.tradingItemWrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}

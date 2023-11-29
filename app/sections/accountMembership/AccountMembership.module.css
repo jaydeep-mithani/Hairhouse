@@ -1,0 +1,45 @@
+.thinText {
+  --typography-body-font-weight: 350;
+}
+
+.tag {
+  background-color: var(--color-interactive-action-accent-01, #fff);
+  color: var(--color-text-primary, #000);
+}
+
+.cardTitle {
+  --typography-medium-font-size: 24px;
+  --typography-medium-line-height: 28.8px;
+}
+
+.listBorder {
+  border-bottom: 1px solid var(--color-border-line-primary, #e2e2e2);
+}
+
+.listText {
+  --typography-subheading-font-size: 16px;
+  --typography-subheading-line-height: 19.2px;
+
+  @media (--tablet-m) {
+    --typography-subheading-font-size: 18px;
+    --typography-subheading-line-height: 21.6px;
+  }
+}
+
+.goldCard {
+  background-color: var(--color-background-accent-01, #2d2d2d);
+  color: var(--color-text-action-primary, #fff);
+}
+
+.goldCardBorder {
+  border-color: var(--color-background-accent-01, #2d2d2d);
+}
+
+.platinumCard {
+  background-color: var(--color-brand-secondary-nougot, #dccdb7);
+  color: var(--color-text-primary, #000);
+}
+
+.platinumCardBorder {
+  border-color: var(--color-brand-secondary-nougot, #dccdb7);
+}

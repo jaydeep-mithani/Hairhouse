@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.points {
+  --typography-caption-font-weight: 500;
+}
+
+.signIn {
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  color: var(--color-text-secondary, #4a4f53);
+}

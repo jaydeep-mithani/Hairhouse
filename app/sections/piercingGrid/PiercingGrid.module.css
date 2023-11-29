@@ -1,0 +1,7 @@
+.tab_text {
+  line-height: 22.4px;
+
+  @media (--mobile) {
+    line-height: 24px !important;
+  }
+}

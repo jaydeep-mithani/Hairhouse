@@ -1,0 +1,1 @@
+export { SalonFaqAccordionSecion } from './salonFaqAccordionSection'

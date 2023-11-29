@@ -1,0 +1,71 @@
+.scrollBar {
+  height: var(--swiper-scrollbar-size, 2px);
+
+  --swiper-scrollbar-sides-offset: 16px;
+
+  width: calc(100% - var(--swiper-scrollbar-sides-offset));
+  touch-action: none;
+  cursor: pointer;
+  margin-top: 10px;
+  background: rgba(226, 226, 226, 50%);
+
+  --swiper-scrollbar-drag-bg-color: var(--color-interactive-action-primary, #000);
+
+  border-color: var(--color-interactive-action-primary, #000);
+
+  @media (--desktop-m) {
+    --swiper-scrollbar-sides-offset: 0px;
+
+    width: 100%;
+  }
+}
+
+.curatedBlogSwiper {
+  padding-left: 1px;
+
+  :global(.swiper-wrapper) {
+    padding-left: 40px;
+  }
+
+  @media (--desktop-m) {
+    :global(.swiper-wrapper) {
+      padding-left: 0;
+      justify-content: center;
+      margin-left: 48px;
+    }
+  }
+
+  :global(.swiper-slide) {
+    width: 300px;
+  }
+
+  @media (--desktop) {
+    :global(.swiper-slide) {
+      width: 378px;
+    }
+  }
+}
+
+.curatedBlogSwiper > div > div:nth-child(1) {
+  margin-top: 24px;
+}
+
+.scrollBarDrag {
+  border: 1px solid #000;
+}
+
+.curatedBlogSwiper > div > div:nth-child(3) {
+  padding-top: 48px;
+}
+
+.cardTitle {
+  color: var(--color-text-primary, #000);
+
+  --typography-subheading-font-size: 16px;
+  --typography-subheading-line-height: 19.2px;
+}
+
+.cardText {
+  color: var(--color-text-secondary, #4a4f53);
+  font-weight: 350 !important;
+}

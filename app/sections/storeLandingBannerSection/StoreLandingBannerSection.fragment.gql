@@ -1,0 +1,36 @@
+fragment StoreLandingBannerSectionElements on StoreLanding {
+  images {
+    image {
+      width
+      height
+      url
+    }
+    altText
+  }
+  buttons {
+    buttonText
+    buttonUrl
+    displayButton
+    buttonTheme
+  }
+  ...StoreShortInfoElements
+}
+fragment StoreShortInfoElements on StoreLanding {
+  title
+  subTitle
+  textBlocks
+  textBlocksColor {
+    hex
+  }
+  features {
+    html
+  }
+  preTitleImage {
+    image {
+      width
+      height
+      url
+    }
+    altText
+  }
+}

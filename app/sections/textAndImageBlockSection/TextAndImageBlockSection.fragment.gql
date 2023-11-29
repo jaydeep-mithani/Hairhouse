@@ -1,0 +1,23 @@
+fragment TextAndImageBlockSection on SectionImageAndTextGrid {
+  id
+  imageAndTextBlocks {
+    heading
+    text {
+      html
+    }
+    contentAlignment
+    imagePosition
+    imageWidth
+    id
+    image {
+      url
+      altText
+    }
+    buttons {
+      buttonText
+      ctaType
+      id
+      url
+    }
+  }
+}

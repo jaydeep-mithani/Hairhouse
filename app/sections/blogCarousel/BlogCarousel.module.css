@@ -1,0 +1,112 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background-primary);
+  padding: 60px 0;
+
+  .carouselWrapper {
+    :global(.customScrollbar) {
+      --swiper-scrollbar-sides-offset: 16px;
+
+      left: 0;
+
+      @media (--mobile) {
+        --swiper-scrollbar-sides-offset: 8px;
+      }
+    }
+
+    .blogCarousel {
+      &.hasScrollbar {
+        :global(.swiper-wrapper) {
+          --swiperWrapperPaddingBottom: 32px;
+        }
+      }
+    }
+  }
+
+  &.noLeftImage {
+    padding-left: 48px;
+    padding-right: 12px;
+
+    @media (--tablet) {
+      padding-left: 32px;
+      padding-right: 0;
+    }
+
+    @media (--mobile) {
+      padding-left: 16px;
+      padding-right: 0;
+    }
+
+    .carouselWrapper {
+      width: 100%;
+      margin-left: 0;
+
+      .blogCarousel > div:first-child,
+      .blogCarousel > div:first-child > p {
+        padding-left: 0;
+      }
+
+      .blogCarousel > div:first-child > p {
+        font-family: var(--typography-display-large-desktop-font-family);
+        font-size: var(--typography-display-large-desktop-font-size);
+        line-height: 120%;
+        letter-spacing: var(--typography-display-large-desktop-letter-spacing);
+
+        @media (--mobile), (--tablet) {
+          font-size: var(--typography-display-large-mobile-font-size);
+        }
+      }
+    }
+  }
+
+  @media (--desktop) {
+    flex-direction: row;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-brand-secondary-light-brown);
+  padding: 20px 16px 75px;
+
+  @media (--desktop) {
+    --typography-pageheading-line-height: 33.3px;
+
+    padding: 50px 215px 50px 50px;
+
+    .imageAndTitle {
+      max-width: 441px;
+    }
+  }
+}
+
+.titleImage {
+  @media (--mobile), (--tablet) {
+    max-width: 50%;
+  }
+}
+
+.title {
+  padding: 0 57px 0 16px;
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+
+  @media (--mobile), (--tablet) {
+    margin-top: -56px;
+  }
+
+  @media (--desktop) {
+    width: 58.2%;
+    margin-left: -100px;
+  }
+
+  /* Custom breakpoint as we are limiting site max-width to 1600px */
+  @media (min-width: 1600px) {
+    width: 62%;
+  }
+}

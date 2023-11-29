@@ -1,0 +1,1 @@
+export { SustainableSalonAccordion } from './SustainableSalonAccordion'

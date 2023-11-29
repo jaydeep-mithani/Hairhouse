@@ -1,0 +1,41 @@
+.root {
+  padding: 0 105px;
+  margin: 50px 0;
+
+  & .sectionTitle {
+    margin-bottom: 20px;
+
+    & h1 {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 33px;
+      color: var(--color-text-primary);
+    }
+
+    & h3 {
+      line-height: 22px;
+    }
+  }
+
+  & .productsContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+
+    @media (--mobile) {
+      display: none;
+    }
+  }
+
+  & .carousel_container {
+    display: none;
+
+    @media (--mobile) {
+      display: block;
+    }
+  }
+
+  @media (--mobile) {
+    padding: 0 16px;
+  }
+}

@@ -1,0 +1,21 @@
+.description {
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.descriptionText {
+  display: inline;
+
+  --typography-body-line-height: 19.6px;
+  --typography-body-font-size: 14px;
+  --typography-body-letter-spacing: 0.005em;
+
+  @media (--mobile), (--tablet) {
+    --typography-body-font-weight: 300;
+  }
+}
+
+.readLink {
+  --typography-body-text-decoration: underline;
+
+  cursor: pointer;
+}

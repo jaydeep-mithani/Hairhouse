@@ -1,0 +1,54 @@
+.header {
+  border-bottom: 1px solid var(--color-border-line-primary, #e2e2e2);
+}
+
+.navWrapper {
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas:
+    'left logo right'
+    'search search search';
+
+  @media (--desktop-s) {
+    grid-template-columns: auto minmax(auto, 800px) auto;
+    grid-template-areas: 'logo search right';
+  }
+}
+
+.leftBlock {
+  grid-area: left;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.search {
+  grid-area: search;
+}
+
+.rightBlock {
+  grid-area: right;
+}
+
+.searchInput {
+  --input-padding-horizontal: 0px;
+}
+
+input:focus-visible {
+  outline: none;
+  outline-color: none;
+}
+
+.buttonBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & button:first-of-type {
+    margin-right: 5px;
+  }
+
+  & button:last-of-type {
+    margin-left: 5px;
+  }
+}

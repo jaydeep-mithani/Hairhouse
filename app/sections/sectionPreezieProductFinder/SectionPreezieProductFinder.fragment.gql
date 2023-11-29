@@ -1,0 +1,4 @@
+fragment SectionPreezieProductFinder on SectionPreezieProductFinder {
+  id
+  preezieGuideKey
+}

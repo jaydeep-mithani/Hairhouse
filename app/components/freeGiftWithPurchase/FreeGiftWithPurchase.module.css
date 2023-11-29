@@ -1,0 +1,26 @@
+.root {
+  min-height: 84px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 12px;
+  gap: 12px;
+  border: 1px solid var(--color-background-accent-01, #2d2d2d);
+}
+
+.description {
+  --typography-body-line-height: 14px;
+}
+
+.title {
+  --typography-body-font-weight: 600;
+}
+
+.image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.description a {
+  text-decoration: underline;
+}

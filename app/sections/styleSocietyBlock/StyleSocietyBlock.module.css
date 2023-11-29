@@ -1,0 +1,237 @@
+.root {
+  position: relative;
+}
+
+.contentBlock {
+  background-color: var(--bgColor, var(--color-brand-secondary-light-brown));
+  padding-left: 24px;
+  padding-right: 24px;
+
+  .button {
+    min-width: 161.5px;
+
+    @media (--tablet-m) {
+      min-width: 174px;
+    }
+  }
+}
+
+.bgImage {
+  background-image: var(--bgImageUrl) !important;
+}
+
+.bgVideo {
+  video {
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+.textArea {
+  > h1 {
+    margin-bottom: 20px;
+    line-height: 120%;
+    letter-spacing: var(--typography-display-x-large-desktop-letter-spacing);
+    white-space: nowrap;
+    color: var(--color-interactive-action-primary);
+    font-size: var(--typography-display-x-large-mobile-font-size);
+    font-family: var(--typography-display-x-large-desktop-font-family);
+    position: relative;
+
+    @media (--tablet-m) {
+      font-size: var(--typography-display-x-large-desktop-font-size);
+    }
+
+    & u {
+      position: relative;
+      text-decoration: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: var(--color-brand-primary-salon);
+        z-index: -1;
+      }
+    }
+  }
+
+  > h3 {
+    font-size: var(--typography-display-large-mobile-font-size);
+    font-family: var(--typography-display-large-mobile-font-family);
+    font-style: normal;
+    font-weight: 85;
+    line-height: 120%;
+    letter-spacing: var(--typography-display-large-mobile-letter-spacing);
+    margin-bottom: 24px;
+    color: var(--color-interactive-action-primary);
+  }
+
+  > p {
+    font-size: 18px;
+    max-width: 335px;
+    line-height: 120%;
+    font-family: var(--typography-heading-font-family-stack, 'Fakt');
+    letter-spacing: var(--typography-display-large-mobile-letter-spacing);
+    margin-bottom: 24px;
+    color: var(--color-interactive-action-primary);
+
+    @media (--tablet-m) {
+      font-size: var(--typography-display-xs-small-desktop-font-size);
+      line-height: 140%;
+      max-width: 360px;
+    }
+  }
+
+  > ul {
+    display: flex;
+    gap: 22px;
+    flex-direction: column;
+
+    > li {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      position: relative;
+      padding-left: 1.5em;
+      color: var(--color-text-primary);
+      font-size: 16px;
+      font-family: var(--typography-heading-font-family-stack, 'Fakt');
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        background: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22none%22%3E%0A%3Cpath%20d%3D%22M26.6673%208L12.0007%2022.6667L5.33398%2016%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E')
+          no-repeat;
+      }
+
+      > div {
+        line-height: 140%;
+        padding-left: 17px;
+        color: var(--color-interactive-action-primary);
+      }
+    }
+  }
+
+  & > ol {
+    list-style: none;
+    counter-reset: custom-counter;
+    padding-left: 0;
+
+    & > li {
+      counter-increment: custom-counter;
+      margin-bottom: 24px;
+      position: relative;
+
+      &::before {
+        content: counter(custom-counter);
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: var(--color-interactive-action-primary);
+        font-size: 48px;
+        font-family: var(--typography-display-large-mobile-font-family);
+        font-style: normal;
+        font-weight: 85;
+        line-height: 120%;
+        letter-spacing: 0.1px;
+      }
+
+      & > div {
+        padding-left: 52px;
+        color: var(--color-text-secondary);
+        font-size: 16px;
+        font-family: var(--typography-heading-font-family-stack, 'Fakt');
+        font-style: normal;
+        font-weight: 350;
+        line-height: 140%;
+
+        strong {
+          color: var(--color-interactive-action-primary);
+          font-weight: 500;
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.layout_inset {
+  @media (--tablet-m) {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .bgImage {
+    @media (--tablet-m) {
+      background-size: 768px auto;
+      background-position: right;
+    }
+  }
+
+  &.contentAlign_left {
+    .contentBlock {
+      @media (--tablet-m) {
+        left: 5px;
+      }
+    }
+
+    .bgImage {
+      @media (--tablet-m) {
+        background-position: right;
+      }
+    }
+  }
+
+  &.contentAlign_right {
+    .contentBlock {
+      @media (--tablet-m) {
+        right: 5px;
+      }
+    }
+
+    .bgImage {
+      @media (--tablet-m) {
+        background-position: left;
+      }
+    }
+  }
+
+  .contentBlock {
+    padding: 32px 20px;
+    margin: -20px 20px 0;
+    max-width: calc(100% - 40px);
+
+    @media (--tablet-m) {
+      margin: 0;
+      max-width: 458px;
+      padding: 56px 49px;
+    }
+
+    .button {
+      min-width: 141.5px;
+
+      @media (--tablet-m) {
+        min-width: 177px;
+      }
+    }
+  }
+}

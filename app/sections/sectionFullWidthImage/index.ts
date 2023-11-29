@@ -1,0 +1,1 @@
+export { SectionFullWidthImage } from './SectionFullWidthImage'

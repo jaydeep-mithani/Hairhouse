@@ -1,0 +1,102 @@
+.thinText {
+  --typography-body-font-weight: 350;
+}
+
+.ordersEmpty {
+  background-color: var(--color-brand-secondary-light-brown, #f9f5f0);
+  padding: 60px 0;
+}
+
+.ordersBorder {
+  border-top: 1px solid var(--color-border-line-primary, #e2e2e2);
+}
+
+.orderBorder {
+  border-bottom: 1px solid var(--color-border-line-primary, #e2e2e2);
+}
+
+.orderSubText {
+  --typography-body-font-weight: 350;
+
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.orderCompleted {
+  background-color: #c4e3ea;
+}
+
+.orderProcessing {
+  background-color: none;
+  border: 1px solid var(--color-interactive-action-primary, #000);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 94px;
+  grid-template-areas:
+    'orderNumber status'
+    'processedAt status'
+    'price       status'
+    'link        status';
+  align-items: start;
+
+  @media (--tablet-m) {
+    grid-template-columns: minmax(130px, 178px) minmax(140px, 188px) minmax(130px, 178px) 94px minmax(129px, 1fr);
+    grid-template-areas: 'orderNumber processedAt price status link';
+    align-items: center;
+  }
+}
+
+.orderNumber {
+  --typography-body-font-size: 16px;
+  --typography-body-line-height: 22.4px;
+
+  @media (--tablet-m) {
+    --typography-body-font-size: 14px;
+    --typography-body-line-height: 19.6px;
+  }
+
+  grid-area: orderNumber;
+}
+
+.orderProcessed {
+  grid-area: processedAt;
+}
+
+.orderPrice {
+  grid-area: price;
+}
+
+.orderStatus {
+  grid-area: status;
+}
+
+.orderLink {
+  grid-area: link;
+  white-space: nowrap;
+
+  @media (--tablet-m) {
+    text-align: right;
+  }
+}
+
+.btnLink {
+  --btn-link-height: 22px;
+
+  @media (--tablet-m) {
+    --btn-link-height: 20px;
+  }
+}
+
+.tableHeader {
+  --typography-bodyLarge-weight-bold: 500;
+}
+
+.paginationNumber {
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.paginationNumberActive {
+  color: var(--color-text-action-primary, #fff);
+  background-color: var(--color-interactive-action-primary, #000);
+}

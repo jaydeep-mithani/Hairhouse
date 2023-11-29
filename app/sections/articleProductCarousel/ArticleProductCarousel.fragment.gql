@@ -1,0 +1,76 @@
+fragment ArticleProductCarousel on SectionRelatedProduct {
+  id
+  headline
+  subText
+  products(first: 10) {
+      id
+      product {
+        id
+        availableForSale
+        compareAtPriceRange {
+          maxVariantPrice {
+            amount
+            currencyCode
+          }
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        descriptionHtml
+        featuredImage {
+          altText
+          height
+          src
+          url
+          width
+        }
+        priceRange {
+          maxVariantPrice {
+            amount
+            currencyCode
+          }
+          minVariantPrice {
+            amount
+            currencyCode
+          }
+        }
+        productType
+        publishedAt
+        tags
+        title
+        totalInventory
+        vendor
+        variants(first: 10) {
+          nodes {
+            availableForSale
+            compareAtPrice {
+              amount
+              currencyCode
+            }
+            currentlyNotInStock
+            quantityAvailable
+            image {
+              altText
+              src
+              url
+              height
+              width
+            }
+            id
+            requiresShipping
+            selectedOptions {
+              name
+              value
+            }
+            sku
+            title
+            price {
+              amount
+              currencyCode
+            }
+          }
+        }
+      }
+    }
+}

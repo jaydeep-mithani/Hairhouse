@@ -1,0 +1,18 @@
+fragment SectionVideoCarousel on SectionVideoCarousel {
+  id
+  headline
+  videos(first: 50) {
+    id
+    altText
+    name
+    time
+    video {
+      id
+      url
+    }
+    thumbnail {
+      id
+      url
+    }
+  }
+}

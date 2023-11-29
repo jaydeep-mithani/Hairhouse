@@ -1,0 +1,1 @@
+export { SalonsMenuVideoSection } from './SalonsMenuVideoSection'

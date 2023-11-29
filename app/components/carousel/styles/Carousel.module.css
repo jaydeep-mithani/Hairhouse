@@ -1,0 +1,244 @@
+.root {
+  position: relative;
+  width: 100%;
+  min-width: 1px;
+
+  :global(.swiper.swiper-vertical) {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.carousel_wrapper {
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: min-content;
+  height: min-content;
+}
+
+.carousel_wrapper:active {
+  cursor: pointer;
+}
+
+.relative_wrapper {
+  position: relative;
+}
+
+.scaled {
+  transition: all 0.3s ease-in;
+
+  :global(.swiper-wrapper) {
+    align-items: stretch;
+  }
+
+  :global(.swiper-slide) {
+    min-height: 100%;
+    height: max-content;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    > div {
+      height: 100%;
+      transition: transform 330ms ease-in-out;
+    }
+  }
+
+  :global(.swiper-slide.swiper-slide-active) {
+    margin-right: 10px;
+    margin-left: 0;
+    padding: 0 12px;
+
+    > div {
+      height: 100%;
+      max-height: 100%;
+      transition: transform 330ms ease-in-out;
+      transform: scale(1.09);
+    }
+  }
+
+  .scrollbar {
+    margin-top: 25px;
+  }
+}
+
+.root:not(.scaled) {
+  :global(.swiper-wrapper) {
+    align-items: stretch;
+  }
+
+  :global(.swiper-slide) {
+    min-height: 100%;
+    height: auto;
+
+    > div {
+      height: 100%;
+    }
+  }
+
+  :global(.swiper-vertical .swiper-slide) {
+    min-height: 0;
+    height: 100%;
+  }
+}
+
+.showScrollbar {
+  :global(.swiper-wrapper) {
+    padding-bottom: var(--swiperWrapperPaddingBottom, 30px);
+  }
+}
+
+.scrollbar {
+  --swiper-scrollbar-sides-offset: var(--custom-swiper-scrollbar-sides-offset, 16px);
+
+  position: absolute;
+  left: var(--swiper-scrollbar-sides-offset, 1%);
+  bottom: var(--swiper-scrollbar-bottom, 4px);
+  top: var(--swiper-scrollbar-top, auto);
+  z-index: 50;
+  height: var(--swiper-scrollbar-size, 2px);
+  width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%));
+  touch-action: none;
+  cursor: pointer;
+  margin-top: 25px;
+  background: var(--color-border-line-primary);
+
+  @media (--desktop) {
+    --swiper-scrollbar-sides-offset: 50px;
+  }
+
+  :global(.swiper-scrollbar-drag) {
+    background-color: var(--swiper-scrollbar-drag-color, var(--color-text-primary));
+    height: var(--swiper-scrollbar-drag-height, 2px);
+  }
+}
+
+.scrollbarContainer::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: calc(-1 * 2px / 2);
+  height: 2px;
+  width: 100%;
+  background: var(--color-border-line-primary);
+}
+
+@media (--tablet-m) {
+  .scaled {
+    :global(.swiper-slide.swiper-slide-active) {
+      margin-right: 12px;
+      margin-left: 3px;
+      padding: 0 12px;
+    }
+  }
+
+  .scrollbar {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 880px) {
+  .carousel_wrapper {
+    overflow: hidden;
+  }
+
+  .scaled {
+    height: min-content;
+
+    :global(.swiper-wrapper) {
+      padding: 30px 0;
+    }
+
+    :global(.swiper-slide) {
+      min-height: 100%;
+      padding: 20px 14px;
+
+      > div {
+        height: min-content;
+      }
+    }
+
+    :global(.swiper-slide.swiper-slide-active) {
+      margin-right: 20px;
+      margin-left: 3px;
+      padding: 0 14px 0 15px;
+
+      > div {
+        height: max-content;
+        max-height: 100%;
+      }
+    }
+
+    .scrollbar {
+      margin-top: 40px;
+    }
+  }
+}
+
+.titleWrapper {
+  display: flex;
+
+  --btn-icon-size: 28px;
+
+  justify-content: var(--justifyTitle, flex-end);
+  align-items: center;
+  padding: var(--titleWrapperPadding, 0 55px 25px);
+}
+
+.titleWrapperCart {
+  --btn-icon-size: 15px;
+  --btn-size-lg-height: var(--btn-icon-size);
+  --navButtonGap: 15px;
+}
+
+.navButtonWrapper {
+  display: none;
+
+  @media (--desktop) {
+    display: flex;
+    gap: var(--navButtonGap, 23px);
+  }
+}
+
+.navButtonWrapperCart {
+  display: flex;
+  gap: var(--navButtonGap, 23px);
+}
+
+.carouselTitle {
+  padding: 0 15px;
+
+  & u {
+    text-decoration: none;
+    box-shadow: inset 0 -8px 0 0 var(--highlightColour);
+  }
+}
+
+.carouselTitleCart {
+  padding: 0;
+}
+
+.navbutton_prev {
+  left: var(--navbutton-offset, 0);
+}
+
+.navbutton_prev svg {
+  transform: rotateZ(180deg);
+}
+
+.navbutton_next {
+  right: var(--navbutton-offset, 0);
+}
+
+.navbutton_disabled {
+  opacity: 0.5;
+}
+
+.element_hidden {
+  visibility: hidden;
+}

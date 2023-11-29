@@ -1,0 +1,39 @@
+fragment StoreItem on StoreItem {
+  heading
+  address
+  logo {
+    altText
+    height
+    size
+    width
+    url
+  }
+  linkUrl {
+    linkText
+    url
+    openInNewWindow
+  }
+  button {
+    ctaType
+    buttonText
+    url
+    openInNewWindow
+  }
+}
+fragment AccordionContentWithLogoAndButton on AccordionContentWithLogoAndButton {
+  title
+  content {
+    ... on StoreItem {
+      ...StoreItem
+    }
+  }
+}
+
+fragment SectionAccordionWithStore on SectionAccordionWithStore {
+  heading
+  accordionContent {
+    ... on AccordionContentWithLogoAndButton {
+      ...AccordionContentWithLogoAndButton
+    }
+  }
+}

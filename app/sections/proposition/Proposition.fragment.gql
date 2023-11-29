@@ -1,0 +1,10 @@
+fragment Proposition on Proposition {
+  id
+  propositionName: name
+  propositions {
+    id
+    loadInNewWindow
+    propositionUrl
+    propositiontext
+  }
+}

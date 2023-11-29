@@ -1,0 +1,30 @@
+fragment SectionBlogCarousel on SectionBlogCarousel {
+  heading
+  id
+  image {
+    altText
+    height
+    url
+    width
+  }
+  articles {
+    author {
+      authorName
+    }
+    thumbnail {
+      altText
+      width
+      url
+      height
+    }
+    blog {
+      title
+      url
+    }
+    shortDescription
+    title
+    publishedAt
+    publishDate
+    url
+  }
+}

@@ -1,0 +1,10 @@
+fragment Section404 on Section404 {
+  title
+  subtitle
+  buttons {
+    url
+    openInNewWindow
+    ctaType
+    buttonText
+  }
+}

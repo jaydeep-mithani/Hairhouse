@@ -1,0 +1,13 @@
+fragment SalonPartners on BrandLogoGrid {
+  carousel
+  headingText
+  subtext
+  brandsBrands {
+    brandName
+    brandLogo {
+      altText
+      id
+      url
+    }
+  }
+}

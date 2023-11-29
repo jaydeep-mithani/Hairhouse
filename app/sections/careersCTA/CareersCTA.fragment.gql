@@ -1,0 +1,18 @@
+fragment CareersCTAFragment on SectionContentLinkBlock {
+  adminTitle
+  contentBlock {
+    adminTitle
+    headingText
+    backgroundColour {
+      hex
+    }
+    icon {
+      altText
+      url
+      width
+      height
+    }
+    linkText
+    linkUrl
+  }
+}

@@ -1,0 +1,5 @@
+fragment SectionProductReview on SectionProductReview {
+  id
+  __typename
+  headline
+}

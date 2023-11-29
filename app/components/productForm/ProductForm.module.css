@@ -1,0 +1,58 @@
+@media screen and (min-width: 1024px) {
+  .productPageSection {
+    margin: 0 3rem;
+  }
+}
+
+.title {
+  --typography-medium-font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrumbs {
+    display: none;
+  }
+}
+
+.amountContainer {
+  width: 80px !important;
+}
+
+.amountWithButtonContainer {
+  display: flex;
+  gap: 12px;
+}
+
+.addToCartButton {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion {
+  --accordion-title-line-height: 19.6px;
+  --typography-heading-font-size: 14px;
+  --typography-heading-font-weight: 400;
+  --accordion-border-color: #e2e2e2;
+
+  font-size: var(--typography-heading-font-size, 14px);
+  line-height: var(--accordion-title-line-height, 19.6px);
+  border-bottom: var(--accordion-border-color, #e2e2e2);
+  font-weight: var(--typography-heading-font-weight, #e2e2e2);
+}
+
+@media screen and (min-width: 1024px) {
+  .benefitsAccordion {
+    display: none;
+  }
+}
+
+.sku {
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.preOrderText {
+  display: flex;
+  gap: 6px;
+}

@@ -1,0 +1,1 @@
+export { SectionCuratedBlog } from './SectionCuratedBlog'

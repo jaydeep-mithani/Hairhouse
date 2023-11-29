@@ -1,0 +1,1 @@
+export { SectionImageWithText } from './SectionImageWithText'

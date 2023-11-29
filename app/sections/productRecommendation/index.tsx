@@ -1,0 +1,1 @@
+export { FeatureProductCarouselTabbed } from './FeatureProductCarouselTabbed'

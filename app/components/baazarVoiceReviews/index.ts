@@ -1,0 +1,1 @@
+export { BaazarVoiceReviews } from './BaazarVoiceReviews'

@@ -1,0 +1,31 @@
+.thinText {
+  --typography-body-font-weight: 350;
+}
+
+.subText {
+  color: var(--color-text-secondary, #4a4f53);
+}
+
+.deleteBtn {
+  --btn-link-text-decoration: underline;
+
+  text-underline-offset: 3px;
+}
+
+.input {
+  font-family: var(--typography-large-font-family-stack);
+  font-size: var(--typography-large-font-size, 30px);
+  line-height: var(--typography-large-line-height, 36px);
+  border-bottom: 1px solid var(--color-interactive-action-primary, #000);
+}
+
+.input:focus {
+  outline-offset: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+.buttonLink {
+  --btn-size-md-height: fit-content;
+  --btn-size-md-padding: 0px;
+}

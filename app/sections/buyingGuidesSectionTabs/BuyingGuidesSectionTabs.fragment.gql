@@ -1,0 +1,10 @@
+#import "../graphql/sections/shared-fragments/button/ButtonModule.fragment.gql"
+
+fragment BuyingGuidesTabsElements on BuyingGuidesTabs {
+  tabs {
+    ... on ModuleLink {
+      url
+      linkText
+    }
+  }
+}

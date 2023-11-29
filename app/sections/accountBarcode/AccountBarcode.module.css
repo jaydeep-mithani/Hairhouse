@@ -1,0 +1,8 @@
+.barcode img {
+  object-fit: cover;
+}
+
+.thinText {
+  --typography-caption-font-weight: 350;
+  --typography-body-font-weight: 350;
+}

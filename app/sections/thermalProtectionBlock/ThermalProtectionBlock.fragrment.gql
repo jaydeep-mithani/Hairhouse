@@ -1,0 +1,14 @@
+fragment SectionFeatureGrid on SectionFeatureGrid {
+  heading
+  description
+  url {
+    linkText
+    url
+  }
+  products {
+    products {
+      id
+      shopifyId
+    }
+  }
+}

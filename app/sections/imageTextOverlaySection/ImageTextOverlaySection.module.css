@@ -1,0 +1,53 @@
+.root {
+  position: relative;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & > div {
+    width: 100%;
+  }
+
+  .overlay,
+  .textContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+
+  .textContent {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-family: 'Victor Serif Variable';
+      font-size: 48px;
+      line-height: 120%;
+      letter-spacing: 0.1px;
+    }
+  }
+
+  .imageWrapperMobile {
+    display: none;
+  }
+
+  @media (--mobile) {
+    .imageWrapperDesktop {
+      display: none;
+    }
+
+    .imageWrapperMobile {
+      display: block;
+    }
+
+    .textContent h1 {
+      font-size: 24px;
+    }
+  }
+}

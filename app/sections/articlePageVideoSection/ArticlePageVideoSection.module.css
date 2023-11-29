@@ -1,0 +1,60 @@
+.root {
+  max-width: 784px;
+  width: 100%;
+  margin: 0 auto 48px;
+
+  @media (max-width: 767px) {
+    padding: 0 16px;
+    margin-bottom: 40px;
+  }
+
+  @media (--tablet) {
+    padding: 0 32px;
+  }
+
+  .videoWrapper {
+    position: relative;
+
+    video {
+      cursor: pointer;
+    }
+
+    .playBtnArea {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 8px 16px;
+      gap: 8px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: var(--color-background-primary);
+
+      button svg {
+        stroke: var(--color-text-primary);
+      }
+
+      .title {
+        font-size: var(--typography-subheading-heavy-desktop-font-size);
+        font-weight: var(--typography-subheading-heavy-desktop-font-weight);
+        line-height: var(--typography-subheading-heavy-desktop-line-height);
+        letter-spacing: var(--typography-subheading-heavy-desktop-letter-spacing);
+        color: var(--color-text-primary);
+      }
+
+      .duration {
+        font-size: var(--typography-subheading-regular-desktop-font-size);
+        font-weight: 350;
+        line-height: var(--typography-subheading-regular-desktop-line-height);
+        letter-spacing: var(--typography-subheading-regular-desktop-letter-spacing);
+        color: var(--color-text-secondary);
+      }
+    }
+
+    &.playing {
+      .playBtnArea {
+        display: none;
+      }
+    }
+  }
+}

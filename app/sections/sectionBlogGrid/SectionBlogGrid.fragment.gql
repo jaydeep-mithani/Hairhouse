@@ -1,0 +1,26 @@
+fragment SectionBlogGrid on SectionBlogGrid {
+  featuredArticles {
+    author {
+      authorName
+    }
+    shortDescription
+    title
+    publishedAt
+    publishDate
+    url
+    thumbnail {
+      height
+      altText
+      width
+      url
+    }
+    blog {
+      title
+      url
+    }
+  }
+  title
+  buttonText
+  enableDarkBackground
+  itemsPerRowDesktop
+}

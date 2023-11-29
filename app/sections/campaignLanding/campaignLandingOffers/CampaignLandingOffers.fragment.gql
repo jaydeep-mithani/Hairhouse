@@ -1,0 +1,32 @@
+fragment SectionOffer on SectionOffer {
+  id
+  offerName: name
+  offerBgColor: backgroundColor {
+    hex
+  }
+  offerItems {
+    ... on OfferItem {
+      ...OfferItem
+    }
+  }
+}
+
+fragment OfferItem on OfferItem {
+  heading
+  buttonText
+  url
+  topLeftBoxText
+  description
+  brandImage {
+    height
+    width
+    url
+    altText
+  }
+  image {
+    height
+    width
+    url
+    altText
+  }
+}

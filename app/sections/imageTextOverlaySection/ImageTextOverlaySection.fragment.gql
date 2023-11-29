@@ -1,0 +1,16 @@
+fragment ImageTextOverlaySectionElements on ImageTextOverlay {
+  title
+  bannerDesktopHeight
+  bannerMobileHeight
+  overlay
+  imageDesktop {
+    ... on ModuleImage {
+      ...ModuleImageElements
+    }
+  }
+  imageMobile {
+    ... on ModuleImage {
+      ...ModuleImageElements
+    }
+  }
+}

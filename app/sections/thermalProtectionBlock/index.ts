@@ -1,0 +1,1 @@
+export { ThermalProtectionBlock } from './ThermalProtectionBlock'

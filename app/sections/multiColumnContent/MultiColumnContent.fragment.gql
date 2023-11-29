@@ -1,0 +1,20 @@
+fragment EditorialTile on EditorialTile {
+  name
+  heading
+  tiles {
+    description
+    heading
+    image {
+      altText
+      url
+      width
+      height
+    }
+  }
+  cta {
+    buttonText
+    openInNewWindow
+    ctaType
+    url
+  }
+}

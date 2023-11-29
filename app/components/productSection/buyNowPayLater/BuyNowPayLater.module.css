@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.providerContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.typography {
+  @media (--mobile), (--tablet) {
+    --typography-caption-font-weight: 300;
+  }
+}

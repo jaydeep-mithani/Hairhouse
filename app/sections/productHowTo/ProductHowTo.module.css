@@ -1,0 +1,142 @@
+.container {
+  margin: 16px 100%;
+}
+
+@media screen and (--tablet-m) {
+  .container {
+    margin: 100px;
+  }
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @media (--desktop) {
+    flex-direction: row;
+    max-width: 1440px;
+    margin: 100px auto;
+    padding-left: 105px;
+    padding-right: 105px;
+  }
+
+  & .sectionTitle {
+    margin-bottom: 20px;
+
+    & h1 {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 33px;
+      color: var(--color-text-primary);
+    }
+
+    & h3 {
+      line-height: 22px;
+    }
+  }
+
+  & .productsContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+
+    @media (--mobile) {
+      display: none;
+    }
+  }
+
+  & .carousel_container {
+    @media (--mobile) {
+      display: block;
+    }
+  }
+}
+
+.swiperContainer {
+  max-width: 100%;
+
+  @media (--desktop) {
+    max-width: 848px;
+    max-height: 626px;
+  }
+}
+
+.descriptionText {
+  & u {
+    text-decoration: none;
+    box-shadow: inset 0 0 -8px 0 var(--highlightColour);
+
+    @media (--desktop) {
+      box-shadow: inset 0 0 -10px 0 var(--highlightColour);
+    }
+  }
+
+  @media (--desktop) {
+    max-width: 762px;
+  }
+}
+
+.textContainerContent li {
+  margin-top: 0;
+}
+
+.textContainerContent li div {
+  margin-bottom: 20px;
+
+  @media (--desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.titleContainer {
+  margin-bottom: 20px;
+
+  @media (--desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.textContainer {
+  max-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 24px;
+
+  @media (--desktop) {
+    max-width: 318px;
+    margin-top: 0;
+    margin-left: 80px;
+  }
+}
+
+.textContainerContent ol {
+  list-style: none;
+  counter-reset: li-counter;
+  color: var(--color-text-secondary, '#4A4F53');
+}
+
+.textContainerContent ol li {
+  counter-increment: li-counter;
+  display: flex;
+  align-items: start;
+}
+
+.textContainerContent ol li::before {
+  content: '0' counter(li-counter) '. ';
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.textContainerContent ol li div {
+  display: inline;
+}
+
+.titleText {
+  --typography-large-font-weight: 500;
+}

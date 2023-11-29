@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  gap: 20px;
+}
+
+.tag {
+  padding: 2px 12px;
+  min-width: 77px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag_text {
+  font-family: var(--typography-label-font-family);
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 17px !important;
+}
+
+.isOnSale {
+  background-color: #fad1da;
+
+  span {
+    color: #ac1b1b;
+  }
+}
+
+.packValueAt {
+  background-color: #f8ebd3;
+
+  span {
+    color: #b2734c;
+  }
+}

@@ -1,0 +1,1 @@
+export { ArticlePageImageSection } from './ArticlePageImageSection'

@@ -1,0 +1,38 @@
+fragment SectionAccordionWithList on SectionAccordionWithList {
+  title
+  logo {
+    ... on Asset {
+      ...Asset
+    }
+  }
+  accordionItems {
+    ... on AccordionContentWithButton {
+      ...AccordionContentWithButton
+    }
+  }
+}
+
+fragment Asset on Asset {
+  altText
+  height
+  size
+  width
+  url
+}
+
+fragment AccordionContentWithButton on AccordionContentWithButton {
+  title
+  items
+  button {
+    ... on Cta {
+      ...SustainableSalonAccordionCta
+    }
+  }
+}
+
+fragment SustainableSalonAccordionCta on Cta {
+  ctaType
+  buttonText
+  url
+  openInNewWindow
+}

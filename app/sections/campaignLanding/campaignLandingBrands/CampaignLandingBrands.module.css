@@ -1,0 +1,31 @@
+.root {
+  padding: 80px 222px;
+
+  @media (--tablet), (--mobile) {
+    padding: 60px 16px;
+  }
+
+  & h1 {
+    font-family: 'Victor Serif Variable';
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+
+  & .brands_container {
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .brands_container img {
+    width: calc(20% - 24px);
+    object-fit: contain;
+
+    @media (--tablet), (--mobile) {
+      width: calc(50% - 24px);
+    }
+  }
+}

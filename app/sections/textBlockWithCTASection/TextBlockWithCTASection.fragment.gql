@@ -1,0 +1,22 @@
+fragment SectionTextBlockWithCTAs on SectionTextBlockWithCTAs {
+  adminTitle
+  heading
+  backgroundColour {
+    hex
+  }
+  textAlignment
+  heading
+  textContent {
+    html
+    text
+    markdown
+    raw
+  }
+  buttonCta {
+    buttonText
+    ctaType
+    id
+    url
+    openInNewWindow
+  }
+}

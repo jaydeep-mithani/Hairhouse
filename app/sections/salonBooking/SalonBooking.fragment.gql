@@ -1,0 +1,28 @@
+fragment SectionSalonBooking on SectionSalonBooking {
+  adminTitle
+  logo {
+    url
+  }
+  salonWelcomeImageHeading1
+  salonWelcomeImageHeading2
+  salonWelcomeImage1 {
+    id
+    url
+    altText
+  }
+  salonWelcomeImage2 {
+    id
+    url
+    altText
+  }
+  promoBannerText
+  promoBannerBackgroundColor {
+    hex
+  }
+  promoBannerCta {
+    buttonText
+    url
+    ctaType
+  }
+  salonCreateAnAccountSubtext
+}

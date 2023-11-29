@@ -1,0 +1,9 @@
+fragment ReviewSteps on ReviewSteps {
+  heading
+  steps {
+    title
+    content {
+      html
+    }
+  }
+}

@@ -1,0 +1,19 @@
+fragment FullWidthImage on FullWidthImage {
+  adminTitle
+  imageDesktop {
+    altText
+    image {
+      height
+      url
+      width
+    }
+  }
+  imageMobile {
+    altText
+    image {
+      height
+      url
+      width
+    }
+  }
+}

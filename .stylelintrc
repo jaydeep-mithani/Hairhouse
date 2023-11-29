@@ -1,0 +1,4 @@
+{
+  "extends": "@overdose/config/src/stylelint-config",
+  "customSyntax": "postcss-scss"
+}

@@ -1,0 +1,38 @@
+fragment SalonService on SalonService {
+  name
+  description
+  subHeading
+  fromText
+  salonNote
+  button {
+    buttonText
+    url
+    ctaType
+    openInNewWindow
+  }
+}
+
+fragment ServicesMenu on ServicesMenu {
+  title
+  description
+  tiles {
+    ... on SalonService {
+      ...SalonService
+    }
+  }
+}
+
+fragment SectionSustainableServicesMenu on SectionSustainableServicesMenu {
+  title
+  salonserviceDescription: description
+  policyLink {
+    linkText
+    url
+    openInNewWindow
+  }
+  servicesMenu {
+    ... on ServicesMenu {
+      ...ServicesMenu
+    }
+  }
+}

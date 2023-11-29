@@ -1,0 +1,23 @@
+fragment SectionCompetitionBanner on SectionCompetitionBanner {
+  id
+  adminTitle
+  backgroundColour {
+    hex
+  }
+  heading
+  description
+  image {
+    altText
+    height
+    url
+    width
+  }
+  subtext
+  button: ctaButtons {
+    id
+    buttonText
+    url
+    openInNewWindow
+    ctaType
+  }
+}

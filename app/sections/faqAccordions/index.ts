@@ -1,0 +1,1 @@
+export { FaqAccordions } from './FaqAccordionsSection'

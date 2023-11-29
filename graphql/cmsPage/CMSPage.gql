@@ -1,0 +1,237 @@
+#import "../app/sections/header/Header.fragment.gql"
+#import "../app/sections/footer/Footer.fragment.gql"
+#import "../app/sections/proposition/Proposition.fragment.gql"
+#import "../app/sections/heroBanner/HeroBanner.fragment.gql"
+#import "../app/sections/twoColumnText/TwoColumnText.fragment.gql"
+#import "../app/sections/videoBlock/SectionVideoCarousel.fragment.gql"
+#import "../app/sections/IGFeed/IGFeed.fragment.gql"
+#import "../app/sections/multiColumnContent/MultiColumnContent.fragment.gql"
+#import "../app/sections/serviceDescriptionBlock/ServiceDescriptionBlock.fragment.gql"
+#import "../app/sections/styleSocietyBlock/StyleSocietyBlock.fragment.gql"
+#import "../app/sections/BrandLogoGrid/BrandLogoGrid.fragment.gql"
+#import "../app/sections/salonServices/SectionSalon.fragment.gql"
+#import "../app/sections/brandTextSection/BrandTextSection.fragment.generated"
+#import "../app/sections/salonMenu/SalonMenu.fragment.gql"
+#import "../app/sections/uspIconsSection/UspIconsSection.fragment.gql"
+#import "../app/sections/LandingHeroBanner/LandingHeroBanner.fragment.gql"
+#import "../app/sections/campaignLanding/sectionGiftFinder/SectionGiftFinder.fragment.gql"
+#import "../app/sections/campaignLanding/sectionShopByGroup/SectionShopByGroup.fragment.gql"
+#import  "../app/sections/textAndImageBlockSection/TextAndImageBlockSection.fragment.gql"
+#import "../app/sections/SectionCategoryCarousel.fragment.gql"
+#import "../app/sections/salonBooking/SalonBooking.fragment.gql"
+#import "../app/sections/imageWithCard/ImageWithCard.fragment.gql"
+#import "../app/sections/textBlockWithCTASection/TextBlockWithCTASection.fragment.gql"
+#import "../app/sections/ServiceMenu.fragment.gql"
+#import "../app/sections/SectionCollectionDropDown.fragment.fragment.gql"
+#import "../app/sections/SectionHeroBannerWithLink.fragment.gql"
+#import "../app/sections/offerTiles/OfferTiles.fragment.gql"
+#import "../app/sections/ParticipatingSalonAccordion.fragment.gql"
+#import "../app/sections/careersRoles/Roles.fragment.gql"
+#import "../app/sections/employeeBenefits/EmployeeBenefits.fragment.gql"
+#import "../app/sections/careersCTA/CareersCTA.fragment.gql"
+#import "../app/sections/reviewSteps/ReviewSteps.fragment.gql"
+#import "../app/sections/SectionIFrameEmbed.fragment.gql"
+#import "../app/sections/sectionBlogGrid/SectionBlogGrid.fragment.gql"
+#import "../app/sections/FeatureProductCarouselTabbed.fragment.gql"
+
+#import "../app/sections/Page404.fragment.gql"
+#import "../app/sections/ContentCards.fragment.gql"
+#import "../app/sections/SectionCompetitionBanner.fragment.gql"
+#import "../app/sections/SectionProductCompare.fragment.gql"
+#import "../app/sections/SectionIFrameEmbed.fragment.gql"
+#import "../app/sections/SectionFeatureGrid.fragment.gql"
+
+query cMSPages($url: String) {
+  pages: cMSPages(where: { url: $url }, first: 1) {
+    id
+    hideFromSitemap
+    title
+    url
+    bannerImage {
+      fileName
+      width
+      height
+      url
+    }
+    sections(first: 40) {
+      __typename
+      ... on Node {
+        id
+        __typename
+      }
+      ... on SectionSalon {
+        ...SalonServices
+      }
+      ... on Proposition {
+        ...Proposition
+      }
+      ... on UspSection {
+        ...UspSection
+      }
+      ... on SectionTextBlockWithCTAs {
+        ...SectionTextBlockWithCTAs
+      }
+      ... on SectionSalonMenu {
+        ...SectionSalonMenu
+      }
+      ... on HeroBanner {
+        ...HeroBanner
+      }
+      ... on SectionSeoText {
+        ...TwoColumnText
+      }
+      ... on SectionVideoCarousel {
+        ...SectionVideoCarousel
+      }
+      ... on SocialMediaCtaLarge {
+        ...SocialMediaCtaLarge
+      }
+      ... on EditorialTile {
+        ...EditorialTile
+      }
+      ... on SectionServiceDescriptionBlock {
+        ...SectionServiceDescriptionBlock
+      }
+      ... on SectionSearchTermList {
+        ...SectionSearchTermList
+      }
+      ... on BrandLogoGrid {
+        ...BrandLogoGrid
+      }
+      ... on SectionPiercingGrid {
+        ...SectionPiercingGrid
+      }
+      ... on SectionBlogCarousel {
+        ...SectionBlogCarousel
+      }
+      ... on SectionImageAndTextGrid {
+        ...TextAndImageBlockSection
+      }
+      ... on EditorialText {
+        ...EditorialText
+      }
+      ... on SectionCuratedBlog {
+        ...SectionCuratedBlog
+      }
+      ... on SectionTestimonial {
+        ...SectionTestimonial
+      }
+      ... on SectionFullWidthVideo {
+        ...SectionFullWidthVideo
+      }
+      ... on SectionCategoryCarousel {
+        ...SectionCategoryCarousel
+      }
+      ... on SectionGiftFinder {
+        ...SectionGiftFinder
+      }
+      ... on SectionSalonBooking {
+        ...SectionSalonBooking
+      }
+      ... on SectionShopByGrid {
+        ...SectionShopByGrid
+      }
+      ... on SectionSustainableSalonLocation {
+        ...SectionSustainableSalonLocation
+      }
+      ... on SectionFullWidthImageAndCopy {
+        ...SectionFullWidthImageAndCopy
+      }
+      ... on SectionSustainableServicesMenu {
+        ...SectionSustainableServicesMenu
+      }
+      ... on SectionFullWidthImage {
+        ...SectionFullWidthImage
+      }
+      ... on SectionCollectionDropDown {
+        ...SectionCollectionDropDown
+      }
+      ... on SectionsAccordion {
+        ...SectionsAccordion
+      }
+      ... on SectionOffer {
+        ...SectionOffer
+      }
+      ... on SectionHeroBannerWithLink {
+        ...SectionHeroBannerWithLink
+      }
+      ... on SectionArticleHeroBanner {
+        id
+        title
+        heading
+        subHeading
+        authorName
+        authorTitle
+        heroImage {
+          height
+          width
+          altText
+          url
+        }
+      }
+      ... on OfferTiles {
+        ...OfferTiles
+      }
+      ... on SectionAccordionWithList {
+        ...SectionAccordionWithList
+      }
+      ... on SectionAccordionWithStore {
+        ...SectionAccordionWithStore
+      }
+      ... on SectionFeaturedPositionsBlock {
+        ...Roles
+      }
+      ... on ReviewSteps {
+        ...ReviewSteps
+      }
+      ... on FeatureProductCarouselTabbed {
+        ...FeatureProductCarouselTabbed
+      }
+      ... on SectionImageWithText {
+        ...SectionImageWithText
+      }
+      ... on SectionIconsWithText {
+        ...EmployeeBenefits
+      }
+      ... on SectionContentLinkBlock {
+        ...CareersCTAFragment
+      }
+      ... on SectionContentCard {
+        ...SectionContentCard
+      }
+      ... on SectionCompetitionBanner {
+        ...SectionCompetitionBanner
+      }
+      ... on JoinCTApanel {
+        ...JoinCTApanel
+      }
+      ... on Section404 {
+        ...Section404
+      }
+      ... on SectionProductCompare {
+        ...SectionProductCompare
+      }
+      ... on SectionBlogGrid {
+        ...SectionBlogGrid
+      }
+      ... on SectionIFrameEmbed {
+        ...SectionIFrameEmbed
+      }
+      ... on SectionFeatureGrid {
+        ...SectionFeatureGrid
+      }
+    }
+    pageMeta {
+      metaDescription
+      metaTitle
+    }
+  }
+  websiteConfigs(first: 1) {
+    footer {
+      ...Footer
+    }
+    header {
+      ...Header
+    }
+  }
+}

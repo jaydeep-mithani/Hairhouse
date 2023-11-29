@@ -1,0 +1,26 @@
+fragment ProductHowTo on ProductHowTo {
+  headline {
+    html
+  }
+  content {
+    html
+  }
+  howToAsset1 {
+    width
+    height
+    size
+    mimeType
+    altText
+    fileName
+    url
+  }
+  howToAsset2 {
+    width
+    height
+    size
+    mimeType
+    altText
+    fileName
+    url
+  }
+}

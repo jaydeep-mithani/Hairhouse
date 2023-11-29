@@ -1,0 +1,6 @@
+fragment SectionSustainableSalonLocation on SectionSustainableSalonLocation {
+  id
+  title
+  subtitle
+  locations
+}

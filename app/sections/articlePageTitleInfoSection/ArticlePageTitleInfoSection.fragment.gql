@@ -1,0 +1,37 @@
+fragment ArticlePageTitleInfoElements on ArticlePage {
+  title
+  subtitle
+  url
+  ...ArticleAuthor
+  blog {
+    title
+    url
+  }
+  thumbnail {
+    altText
+    height
+    width
+    url
+  }
+  image {
+    altText
+    height
+    url
+    width
+  }
+  publishDate
+  publishedAt
+}
+
+fragment ArticleAuthor on ArticlePage {
+  author {
+    authorImage {
+      altText
+      height
+      width
+      url
+    }
+    authorName
+    authorPosition
+  }
+}

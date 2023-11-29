@@ -1,0 +1,9 @@
+fragment ArticlePageLinks on ArticlePage {
+  linksSection {
+    links {
+      link
+      linkText
+    }
+    title
+  }
+}

@@ -1,0 +1,23 @@
+    fragment CollectionPage on CollectionPage {
+  collection {
+    ... on ShopifyStorefront_Collection {
+      handle
+      title
+    }
+  }
+}
+
+ fragment SectionCollectionDropDown on SectionCollectionDropDown {
+  id
+  adminTitle
+  headline
+  shopifyCollections {
+    title
+  id
+  collectionPage {
+    ... on CollectionPage {
+      ...CollectionPage
+    }
+  }
+  }
+}

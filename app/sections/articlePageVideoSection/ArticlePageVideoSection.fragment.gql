@@ -1,0 +1,16 @@
+fragment ArticlePageVideoSection on SectionFullWidthVideo {
+  id
+  thumbnail {
+    altText
+    height
+    url
+    width
+  }
+  videoFile {
+    altText
+    height
+    width
+    url
+  }
+  videoTitle
+}

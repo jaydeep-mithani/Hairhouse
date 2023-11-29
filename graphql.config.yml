@@ -1,0 +1,105 @@
+#graphql.config.yml
+overwrite: true
+schema: 'https://api-ap-southeast-2.hygraph.com/v2/cld7xg0ag072z01um5a37aosy/dev'
+# TODO: update this import
+verbose: true
+debug: true
+documents:
+  [
+    '**/CMSPage.gql',
+    '**/ProductPage.gql',
+    '**/CollectionPage.gql',
+    '**/BlogPage.gql',
+    '**/ArticlePage.gql',
+    '**/Proposition.fragment.gql',
+    '**/Header.fragment.gql',
+    '**/Footer.fragment.gql',
+    '**/HeroBanner.fragment.gql',
+    '**/SectionProductMain.fragment.gql',
+    '**/ProductBenefitsGrid.fragment.gql',
+    '**/SectionSeoText.fragment.gql',
+    '**/SectionCollectionMain.fragment.gql',
+    '**/SectionVideoCarousel.fragment.gql',
+    '**/SectionPreezieProductFinder.fragment.gql',
+    '**/TwoColumnText.fragment.gql',
+    '**/IGFeed.fragment.gql',
+    '**/MultiColumnContent.fragment.gql',
+    '**/CollectionCarousel.fragment.gql',
+    '**/SectionCompetitionBanner.fragment.gql',
+    '**/SectionJoinBanner.fragment.gql',
+    '**/ArticleAuthorAndShare.fragment.gql',
+    '**/ServiceDescriptionBlock.fragment.gql',
+    '**/PopularSearches.fragment.gql',
+    '**/StyleSocietyBlock.fragment.gql',
+    '**/PiercingGrid.fragment.gql',
+    '**/BrandLogoGrid.fragment.gql',
+    '**/BlogCarousel.fragment.gql',
+    '**/CampaignLandingOffers.fragment.gql',
+    '**/OfferScreen.fragment.gql',
+    '**/SalonServices.fragment.gql',
+    '**/MultiCollectionSlider.fragment.gql',
+    '**/SectionSalon.fragment.gql',
+    '**/FeatureProductCarouselTabbed.fragment.gql',
+    '**/Page404.fragment.gql',
+    '**/CustomerLogin.fragment.gql',
+    '**/TextAndImageBlockSection.fragment.gql',
+    '**/SectionProductReview.fragment.gql',
+    '**/BrandTextSection.fragment.gql',
+    '**/SectionCuratedBlog.fragment.gql',
+    '**/SalonMenu.fragment.gql',
+    '**/LandingHeroBanner.fragment.gql',
+    '**/SectionGiftFinder.fragment.gql',
+    '**/SectionTestimonial.fragment.gql',
+    '**/LandingHeroBanner.fragment.gql',
+    '**/SalonsMenuVideoSection.fragment.gql',
+    '**/UspIconsSection.fragment.gql',
+    '**/SectionShopByGrid.fragment.gql',
+    '**/SectionSustainableSalonLocation.fragment.gql',
+    '**/SectionCategoryCarousel.fragment.gql',
+    '**/SalonBooking.fragment.gql',
+    '**/ProductHowTo.fragment.gql',
+    '**/ImageWithCard.fragment.gql',
+    '**/TextBlockWithCTASection.fragment.gql',
+    '**/ServiceMenu.fragment.gql',
+    '**/SectionFullWidthImage.fragment.gql',
+    '**/SectionCollectionDropDown.fragment.gql',
+    '**/OfferScreen.fragment.gql',
+    '**/ArticlePageAccordionSection.fragment.gql',
+    '**/ArticlePageTitleInfoSection.fragment.gql',
+    '**/ArticlePageTextSection.fragment.gql',
+    '**/ArticlePageImageSection.fragment.gql',
+    '**/ArticlePageVideoSection.fragment.gql',
+    '**/ArticlePageLinksSection.fragment.gql',
+    '**/ArticleProductCarousel.fragment.gql',
+    '**/OfferTiles.fragment.gql',
+    '**/SustainableSalonAccordion.fragment.gql',
+    '**/ParticipatingSalonAccordion.fragment.gql',
+    '**/SalonPartners.fragment.gql',
+    '**/Roles.fragment.gql',
+    '**/ReviewSteps.fragment.gql',
+    '**/SectionImageWithText.fragment.gql',
+    '**/EmployeeBenefits.fragment.gql',
+    '**/CareersCTA.fragment.gql',
+    '**/SectionProductCompare.fragment.gql',
+    '**/SubcategoriesCarousel.fragment.gql',
+    '**/ContentCards.fragment.gql',
+    '**/SectionIFrameEmbed.fragment.gql',
+    '**/SectionBlogGrid.fragment.gql',
+    '**/ThermalProtectionBlock.fragrment.gql'
+  ]
+generates:
+  graphql/types.tsx: #generate/types.tsx for typesafety during development
+    plugins:
+      - 'typescript'
+  graphql/:
+    #useful so that it doesn't generate 1 big file but separate them per .graphql file
+    preset: near-operation-file
+    presetConfig:
+      extension: .generated.tsx
+      baseTypesPath: types.ts
+    # generates react hooks for urql
+    plugins:
+      - 'typescript-operations'
+      - 'typescript-urql'
+    config:
+      withHooks: true

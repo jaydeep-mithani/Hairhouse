@@ -1,0 +1,110 @@
+.rewardsCards {
+  margin-top: 17px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (--tablet-m) {
+    flex-direction: row;
+  }
+
+  @media (--desktop-m) {
+    gap: 20px;
+    justify-content: flex-start;
+  }
+}
+
+.rewardsCard {
+  width: 100%;
+  height: 200px;
+  padding: 12px;
+  background: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-text-action-primary, #fff);
+  position: relative;
+  z-index: 20;
+
+  @media (--tablet-m) {
+    height: auto;
+    max-width: 200px;
+    min-width: 150px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+.rewardsBackgroundImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  z-index: 10;
+
+  @media (--tablet-m) {
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+.rewardsGragient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 15;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0%) 36.46%, rgba(0, 0, 0, 60%) 79.69%);
+}
+
+.rewardsBackgroundImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rewardsTag {
+  align-self: flex-end;
+  position: relative;
+  z-index: 20;
+}
+
+.rewardsCardContent {
+  position: relative;
+  z-index: 20;
+}
+
+.rewardsLinkWrap {
+  border-bottom: 1px solid var(--color-interactive-action-accent-01, #fff);
+  margin: 8px 0;
+}
+
+.Base-Button--Link {
+  justify-content: space-between;
+}
+
+.rewardsLink {
+  width: 100%;
+
+  --btn-link-color: var(--color-interactive-action-accent-01, #fff);
+  --btn-link-color-hover: var(--color-interactive-action-accent-01, #fff);
+  --btn-link-padding: 0px 0px 5px 0px;
+  --btn-link-text-decoration-hover: none;
+}
+
+.rewardsLink svg {
+  --btn-icon-size: 24px;
+}
+
+.rewardsLinkTitle {
+  --typography-medium-font-size: 24px;
+  --typography-medium-line-height: 28.8px;
+}
+
+.thinText {
+  --typography-body-font-weight: 350;
+  --typography-caption-font-weight: 350;
+}

@@ -1,0 +1,7 @@
+.root {
+  margin: 0 16px;
+
+  @media (--desktop) {
+    margin: 0 50px;
+  }
+}

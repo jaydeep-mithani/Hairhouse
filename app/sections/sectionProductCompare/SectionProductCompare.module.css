@@ -1,0 +1,205 @@
+.root {
+  padding: 90px 130px;
+
+  --tabs-line-color-header-border: transparent;
+  --tabs-nav-item-min-width: fit-content;
+
+  @media (--tablet) {
+    padding: 40px 16px;
+  }
+
+  @media (--mobile) {
+    padding: 40px 5px;
+  }
+
+  & h1 {
+    font-family: 'Victor Serif';
+    line-height: 120%;
+    padding-bottom: 42px;
+  }
+
+  & .comparision_table {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+  }
+
+  & .products {
+    display: flex;
+  }
+
+  & .product {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 100%;
+    margin: 0;
+
+    @media (--tablet) {
+      min-width: 100%;
+    }
+
+    @media (--mobile) {
+      min-width: 100%;
+    }
+  }
+
+  & .product_image {
+    padding-bottom: 20px;
+
+    & img {
+      padding-bottom: 16px;
+    }
+  }
+
+  & .test {
+    padding: 500px;
+
+    & p {
+      color: green;
+    }
+  }
+
+  & .attribute_label {
+    line-height: 140%;
+    padding: 4px 16px;
+    background-color: #f9f5f0;
+
+    @media (--mobile) {
+      padding: 2px;
+    }
+  }
+
+  & .attribute_label.attribute_label_hidden {
+    color: transparent;
+    user-select: none;
+
+    & span {
+      opacity: 0;
+    }
+  }
+
+  & .attribute_value,
+  .view_product_link {
+    display: flex;
+    gap: 5.07px;
+    align-items: center;
+    padding: 12px 16px 20px;
+
+    --typography-caption-font-size: 14px;
+
+    @media (--tablet) {
+      --typography-body-font-size: 12px;
+    }
+
+    @media (--mobile) {
+      --typography-body-font-size: 12px;
+
+      padding: 12px 2px 20px;
+      flex-wrap: wrap;
+      min-height: 72px;
+    }
+  }
+
+  & .attribute_value.attribute_rating {
+    @media (--mobile) {
+      & svg {
+        height: 8px;
+        width: 8px;
+      }
+    }
+  }
+
+  & .view_product_link {
+    max-width: fit-content;
+    margin: 12px 16px 20px;
+    padding: 0;
+
+    & a {
+      border-bottom: 1px solid #000;
+    }
+
+    @media (--mobile) {
+      margin: 2px;
+    }
+  }
+
+  & .direction_arrows {
+    position: absolute;
+    top: -3.5%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+
+    & button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+
+  & .tabWrapper > div > div {
+    &:first-child {
+      gap: 32px;
+
+      @media (--mobile) {
+        gap: 20px;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+
+    &:first-child::-webkit-scrollbar {
+      @media (--mobile) {
+        display: none;
+      }
+    }
+
+    & button {
+      padding: 0;
+      padding-bottom: 10px;
+      display: block;
+      width: fit-content;
+
+      --typography-body-font-size: 16px;
+      --typography-body-font-family-stack: 'Fakt';
+
+      line-height: 140%;
+
+      --typography-body-font-weight: 500;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  & .tabWrapper > div > div > button[data-active='true'] {
+    border-bottom: 3px solid #000;
+  }
+
+  & h6 {
+    padding: 0 4px;
+
+    --typography-subheading-font-weight-bold: 500;
+
+    height: 39px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: wrap;
+
+    @media (--mobile) {
+      --typography-subheading-font-size: 12px;
+
+      height: 52px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: wrap;
+    }
+  }
+}

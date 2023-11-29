@@ -1,0 +1,110 @@
+.wrapper {
+  background-color: var(--color-background-accent-01, #2d2d2d);
+}
+
+.title {
+  color: var(--color-text-action-primary, #fff);
+}
+
+.playBtn {
+  --btn-solid-color-border-secondary: none;
+  --btn-size-md-height: 36px;
+  --btn-icon-size: 20px;
+}
+
+.playSingleBtn {
+  --btn-solid-color-border-secondary: none;
+  --btn-size-md-height: 36px;
+  --btn-icon-size: 20px;
+}
+
+.time {
+  --btn-solid-color-text-secondary: var(--color-text-secondary, #4a4f53);
+
+  color: var(--color-text-secondary, #4a4f53);
+
+  --typography-subheading-font-weight-regular: 350;
+}
+
+.videoWrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.singleVideoBtnText {
+  --typography-subheading-font-size: 16px;
+  --typography-subheading-line-height: 19.2px;
+}
+
+.navButton {
+  --btn-icon-size: 25px;
+}
+
+.navButtonPrev svg {
+  transform: rotateZ(180deg);
+}
+
+.navButtonDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.videoSwiper {
+  :global(.swiper-slide) {
+    width: 321px;
+    height: 240px;
+    margin: auto;
+  }
+
+  @media (--mobile-l) {
+    :global(.swiper-slide-active) {
+      width: 380px;
+      height: 270px;
+    }
+
+    :global(.slide-active) {
+      width: 380px;
+      height: 270px;
+    }
+  }
+
+  @media (--desktop) {
+    :global(.swiper-slide) {
+      width: 500px;
+      height: 350px;
+      margin: auto;
+    }
+
+    :global(.swiper-wrapper:not(:has(.slide-active))) {
+      :global(.swiper-slide-active) {
+        width: 604px;
+        height: 423px;
+      }
+    }
+
+    :global(.slide-active) {
+      width: 604px;
+      height: 423px;
+    }
+
+    :global(.swiper-slide-active) button {
+      height: 44px;
+    }
+  }
+}
+
+.videoScrollbar {
+  height: var(--swiper-scrollbar-size, 2px);
+  width: 100%;
+  touch-action: none;
+  cursor: pointer;
+  margin-top: 25px;
+  background: rgba(226, 226, 226, 50%);
+
+  --swiper-scrollbar-drag-bg-color: var(--color-background-primary, #fff);
+
+  @media (--desktop) {
+    --swiper-scrollbar-sides-offset: 0px;
+  }
+}
